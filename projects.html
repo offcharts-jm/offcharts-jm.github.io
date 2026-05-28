@@ -174,6 +174,21 @@
             text-decoration: underline;
         }
 
+        .download-btn {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 14px;
+            border-radius: 8px;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .download-btn:hover {
+            opacity: 0.85;
+        }
+
         footer {
             margin-top: 40px;
             padding: 20px;
@@ -182,7 +197,6 @@
             border-top: 1px solid rgba(148, 163, 184, 0.25);
         }
 
-        /* Scroll animations */
         .reveal {
             opacity: 0;
             transform: translateY(16px);
@@ -218,6 +232,41 @@
 
     <div class="grid">
 
+        <!-- ⭐ FEATURED PROJECT -->
+        <div class="card reveal" style="border-left: 4px solid var(--accent);">
+            <h3 style="color: var(--accent);">Featured Project — AES Password Manager</h3>
+            <p>A fully encrypted password manager using AES‑256, featuring a pure‑black UI, blue accents, password strength meter, show/hide toggle, clipboard copy, search, delete, and EXE support.</p>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">AES‑256</span>
+                <span class="tag">Security</span>
+                <span class="tag">Tkinter</span>
+            </div>
+
+            <a class="link" href="https://github.com/offcharts-jm/password-manager-aes" target="_blank">View on GitHub →</a>
+
+            <a class="download-btn" href="https://github.com/user-attachments/files/28355892/password_manager_aes.zip.zip" download>
+                ⬇ Download EXE (ZIP)
+            </a>
+        </div>
+
+        <!-- ⭐ RECENT PROJECT -->
+        <div class="card reveal">
+            <h3>AES Password Manager (Recent)</h3>
+            <p>A modern password manager with encryption, UI enhancements, password generator, strength meter, and EXE build.</p>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Encryption</span>
+            </div>
+
+            <a class="link" href="https://github.com/offcharts-jm/password-manager-aes" target="_blank">View on GitHub →</a>
+
+            <a class="download-btn" href="https://github.com/user-attachments/files/28355892/password_manager_aes.zip.zip" download>
+                ⬇ Download EXE (ZIP)
+            </a>
+        </div>
+
+        <!-- Existing Projects -->
         <div class="card reveal">
             <h3>Login System</h3>
             <p>A simple authentication system that checks usernames and passwords. Helped me understand input handling and basic logic.</p>
@@ -286,7 +335,6 @@
 </footer>
 
 <script>
-    // Theme handling
     (function () {
         const root = document.documentElement;
         const toggle = document.getElementById('themeToggle');
@@ -311,7 +359,6 @@
         });
     })();
 
-    // Scroll reveal
     const revealElements = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver(
         entries => {
