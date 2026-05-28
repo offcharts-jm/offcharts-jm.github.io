@@ -165,6 +165,57 @@
             color: var(--muted);
         }
 
+        /* NEW PROJECTS SECTION */
+        #projects {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        #projects h2 {
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 30px;
+        }
+
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .project-card {
+            background: var(--card);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            transition: 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
         footer {
             margin-top: 40px;
             padding: 20px;
@@ -237,6 +288,33 @@
             <span class="pill">HTML</span>
             <span class="pill">Beginner projects</span>
         </div>
+    </div>
+</section>
+
+<!-- ⭐ NEW LATEST PROJECTS SECTION ⭐ -->
+<section id="projects">
+    <h2>Latest Projects</h2>
+
+    <div class="project-list">
+
+        <div class="project-card">
+            <h3>Password Manager V2</h3>
+            <p>A Python password manager with encryption, search, delete, update, and password generation.</p>
+            <a href="https://github.com/offcharts-jm/Password_Manager_V2" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Python Quiz App</h3>
+            <p>A multiple-choice quiz application built in Python with scoring and question logic.</p>
+            <a href="https://github.com/offcharts-jm/Python-Quiz-App" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Login System</h3>
+            <p>A beginner-friendly login system using file-based authentication and validation.</p>
+            <a href="https://github.com/offcharts-jm/Login-System" target="_blank">View on GitHub</a>
+        </div>
+
     </div>
 </section>
 
