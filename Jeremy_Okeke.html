@@ -3,64 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Jeremy Okeke</title>
-
-    <meta name="description" content="Learn about Jeremy Okeke — Python developer, athlete, and creator focused on building projects and improving performance.">
-    <meta name="keywords" content="Jeremy Okeke, Python developer, athlete, portfolio, coding, UK developer">
+    <title>About Me - Jeremy Okeke</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #0b1220;
-            color: #ffffff;
-            animation: fadeIn 1s ease-in-out;
+        :root {
+            --bg: #020617;
+            --card: #0f172a;
+            --accent: #60a5fa;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--text);
         }
 
         nav {
-            background-color: #0d1628;
-            padding: 15px;
-            text-align: center;
+            background-color: rgba(15, 23, 42, 0.95);
+            padding: 14px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
         }
 
         nav a {
-            color: #60a5fa;
-            margin: 0 15px;
+            color: var(--muted);
             text-decoration: none;
-            font-size: 18px;
+            font-size: 15px;
+            text-transform: uppercase;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: var(--accent);
         }
 
-        section {
-            max-width: 850px;
-            margin: auto;
-            padding: 20px;
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-size: 34px;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 24px;
         }
 
         .card {
-            background-color: #111c33;
+            background: var(--card);
+            border-radius: 16px;
             padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
+            border: 1px solid rgba(148, 163, 184, 0.25);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 15px;
             line-height: 1.6;
         }
 
-        h1, h2 {
-            color: #60a5fa;
+        ul {
+            padding-left: 20px;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.6;
         }
 
-        .quote {
-            font-style: italic;
-            color: #60a5fa;
-            margin-top: 10px;
+        li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 820px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            color: var(--muted);
+            border-top: 1px solid rgba(148, 163, 184, 0.25);
         }
     </style>
 </head>
@@ -70,71 +119,46 @@
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
     <a href="Jeremy_Okeke.html">About Me</a>
+    <a href="training_log.html">Training Log</a>
 </nav>
 
-<section>
-    <h1>About Jeremy Okeke</h1>
+<div class="container">
+    <h1>About Me</h1>
+    <p class="subtitle">Balancing code, training, and personal growth.</p>
 
-    <div class="card">
-        <h2>Who I Am</h2>
-        <p>
-            I'm Jeremy Okeke — a Python developer and athlete based in the United Kingdom. 
-            I focus on building beginner-friendly software projects, improving my coding skills, 
-            and developing a strong personal portfolio on GitHub.
-        </p>
-        <p class="quote">“Building my body and my skills — one day at a time.”</p>
+    <div class="layout">
+
+        <div class="card">
+            <h2>Who I Am</h2>
+            <p>
+                I'm Jeremy, a beginner Python developer who learns best by building real projects.
+                I enjoy breaking problems down into simple steps and seeing my code actually work.
+                At the same time, I'm serious about training as an athlete—working on strength,
+                conditioning, and discipline.
+            </p>
+            <p>
+                This mix of coding and training helps me stay focused, consistent, and hungry to improve.
+                I'm not trying to be perfect—I'm trying to get better every week.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>What I'm Working On</h2>
+            <ul>
+                <li>Building more Python projects and pushing them to GitHub.</li>
+                <li>Improving my understanding of functions, loops, and clean code.</li>
+                <li>Learning how to structure projects and use Git properly.</li>
+                <li>Tracking my training sessions and progress over time.</li>
+                <li>Developing a stronger personal identity as both a developer and athlete.</li>
+            </ul>
+        </div>
+
     </div>
+</div>
 
-    <div class="card">
-        <h2>Software Development</h2>
-        <p>
-            I create simple, clean Python applications that demonstrate core programming concepts. 
-            My projects include calculators, quiz apps, password generators, timers, and interactive games. 
-            I upload all my work to GitHub under the username <strong>offcharts-jm</strong>.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>Athletic Profile</h2>
-        <p>
-            Alongside software development, I train consistently to improve my strength, conditioning, 
-            and overall athletic performance. I focus heavily on leg strength, endurance, and explosive power, 
-            balancing both fitness and coding as part of my lifestyle.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>Athletic Goals</h2>
-        <p>
-            • Build stronger legs and improve cycling performance<br>
-            • Increase stamina and conditioning<br>
-            • Improve overall strength and physique<br>
-            • Maintain a balanced lifestyle between fitness and coding
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>Training Routine</h2>
-        <p>
-            I follow a consistent training routine that includes cycling sessions, leg-focused workouts, 
-            strength training, and conditioning. My goal is to improve both performance and physical development 
-            while staying disciplined in my coding journey.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>Online Presence</h2>
-        <p>
-            I'm building a strong digital identity through my portfolio website and GitHub profile. 
-            My aim is to ensure that accurate, up-to-date information about me appears online, 
-            reflecting my real skills and interests.
-        </p>
-        <p>
-            GitHub: <a href="https://github.com/offcharts-jm" style="color:#60a5fa;">github.com/offcharts-jm</a>
-        </p>
-    </div>
-
-</section>
+<footer>
+    Still early in the journey, but moving with intention.
+</footer>
 
 </body>
 </html>
