@@ -1,349 +1,43 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training Log - Jeremy Okeke</title>
-
-    <style>
-        :root {
-            --bg-dark: #020617;
-            --card-dark: #0f172a;
-            --accent: #60a5fa;
-            --text-dark: #e5e7eb;
-            --muted-dark: #94a3b8;
-
-            --bg-light: #f9fafb;
-            --card-light: #ffffff;
-            --text-light: #020617;
-            --muted-light: #6b7280;
-        }
-
-        html[data-theme="dark"] {
-            --bg: var(--bg-dark);
-            --card: var(--card-dark);
-            --text: var(--text-dark);
-            --muted: var(--muted-dark);
-        }
-
-        html[data-theme="light"] {
-            --bg: var(--bg-light);
-            --card: var(--card-light);
-            --text: var(--text-light);
-            --muted: var(--muted-light);
-        }
-
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            transition: background 0.25s ease, color 0.25s ease;
-        }
-
-        nav {
-            background-color: rgba(15, 23, 42, 0.95);
-            padding: 14px 20px;
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            position: sticky;
-            top: 0;
-            z-index: 20;
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-        }
-
-        html[data-theme="light"] nav {
-            background-color: rgba(249, 250, 251, 0.95);
-            border-bottom-color: rgba(148, 163, 184, 0.35);
-        }
-
-        nav a {
-            color: var(--muted);
-            text-decoration: none;
-            font-size: 15px;
-            text-transform: uppercase;
-        }
-
-        nav a:hover {
-            color: var(--accent);
-        }
-
-        .nav-right {
-            position: absolute;
-            right: 20px;
-            top: 10px;
-        }
-
-        .theme-toggle {
-            width: 34px;
-            height: 34px;
-            border-radius: 999px;
-            border: 1px solid rgba(148, 163, 184, 0.5);
-            background: transparent;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: var(--muted);
-            transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-        }
-
-        .theme-toggle:hover {
-            background: rgba(148, 163, 184, 0.15);
-            color: var(--accent);
-            border-color: var(--accent);
-        }
-
-        .theme-toggle span {
-            font-size: 17px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-
-        h1 {
-            font-size: 34px;
-            margin-bottom: 6px;
-            text-align: center;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: var(--muted);
-            margin-bottom: 40px;
-        }
-
-        .summary-card {
-            background: var(--card);
-            border-radius: 16px;
-            padding: 20px;
-            border: 1px solid rgba(148, 163, 184, 0.25);
-            margin-bottom: 40px;
-        }
-
-        .summary-card h2 {
-            margin-top: 0;
-            font-size: 22px;
-        }
-
-        .summary-card p {
-            color: var(--muted);
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-        .log {
-            display: grid;
-            gap: 20px;
-        }
-
-        .entry {
-            background: var(--card);
-            border-radius: 16px;
-            padding: 20px;
-            border: 1px solid rgba(148, 163, 184, 0.25);
-        }
-
-        .entry-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 8px;
-        }
-
-        .entry-date {
-            font-size: 17px;
-            font-weight: 600;
-        }
-
-        .entry-focus {
-            font-size: 14px;
-            color: var(--muted);
-        }
-
-        .entry-notes {
-            font-size: 15px;
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            text-align: center;
-            color: var(--muted);
-            border-top: 1px solid rgba(148, 163, 184, 0.25);
-        }
-
-        /* Scroll animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(16px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    <title>Training Log | Jeremy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="Jeremy_Okeke.html">About Me</a>
-    <a href="training_log.html">Training Log</a>
-    <a href="contact.html">Contact</a>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="premium_tools.html">Premium Tools</a></li>
+            <li><a href="services.html">Hire Me</a></li>
+            <li><a href="Jeremy_Okeke.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="request_form.html">Request Tool</a></li>
+            <li><a href="training_log.html" class="active">Training Log</a></li>
+            <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <div class="nav-right">
-        <button class="theme-toggle" id="themeToggle">
-            <span id="themeIcon">🌙</span>
-        </button>
+<section class="training">
+    <h1>Training Log</h1>
+    <p>Track my workouts, progress, and athletic development.</p>
+
+    <div class="log-card">
+        <h2>Recent Sessions</h2>
+        <p>Coming soon...</p>
     </div>
-</nav>
-
-<div class="container">
-
-    <h1 class="reveal">Training Log</h1>
-    <p class="subtitle reveal">A weekly record of sessions, effort, and progress.</p>
-
-    <!-- WEEKLY SUMMARY -->
-    <div class="summary-card reveal">
-        <h2>Weekly Summary</h2>
-        <p><strong>Total Sessions:</strong> 5</p>
-        <p><strong>Hardest Session:</strong> Tuesday — Upper Body</p>
-        <p><strong>Weekly Focus:</strong> Strength & Conditioning</p>
-        <p><strong>Next Week’s Goal:</strong> Improve consistency and maintain recovery balance.</p>
-    </div>
-
-    <div class="log">
-
-        <div class="entry reveal">
-            <div class="entry-header">
-                <span class="entry-date">Monday — Leg Day</span>
-                <span class="entry-focus">Strength & Conditioning</span>
-            </div>
-            <div class="entry-notes">
-                Bike machine interval session — 20 minutes at high resistance. Strong lower‑body focus with emphasis on power output and endurance under load.
-            </div>
-        </div>
-
-        <div class="entry reveal">
-            <div class="entry-header">
-                <span class="entry-date">Tuesday — Upper Body</span>
-                <span class="entry-focus">Strength</span>
-            </div>
-            <div class="entry-notes">
-                Push‑ups, dips, and curls. Solid upper‑body volume session targeting chest, triceps, and biceps with controlled tempo and clean form.
-            </div>
-        </div>
-
-        <div class="entry reveal">
-            <div class="entry-header">
-                <span class="entry-date">Wednesday — Conditioning</span>
-                <span class="entry-focus">Cardio & Endurance</span>
-            </div>
-            <div class="entry-notes">
-                Treadmill conditioning — 15 minutes at incline 5. Steady pace with focus on breathing control and maintaining consistent effort.
-            </div>
-        </div>
-
-        <div class="entry reveal">
-            <div class="entry-header">
-                <span class="entry-date">Thursday — Rest Day</span>
-                <span class="entry-focus">Recovery</span>
-            </div>
-            <div class="entry-notes">
-                Full rest day to reset, reduce fatigue, and prepare for the next training block.
-            </div>
-        </div>
-
-        <div class="entry reveal">
-            <div class="entry-header">
-                <span class="entry-date">Friday — Full Body Session</span>
-                <span class="entry-focus">Strength & Mobility</span>
-            </div>
-            <div class="entry-notes">
-                Balanced full‑body workout including compound movements and mobility work. Aimed at improving overall strength, stability, and movement quality.
-            </div>
-        </div>
-
-        <div class="entry reveal">
-            <div class="entry-header">
-                <span class="entry-date">Saturday — Football Session</span>
-                <span class="entry-focus">Agility & Game Conditioning</span>
-            </div>
-            <div class="entry-notes">
-                Football session focusing on movement, agility, sprint bursts, and game‑specific conditioning. High‑intensity work with lots of directional changes.
-            </div>
-        </div>
-
-        <div class="entry reveal">
-            <div class="entry-header">
-                <span class="entry-date">Sunday — Rest Day</span>
-                <span class="entry-focus">Recovery</span>
-            </div>
-            <div class="entry-notes">
-                Rest day to recover from the week’s workload and prepare for the next cycle.
-            </div>
-        </div>
-
-    </div>
-</div>
+</section>
 
 <footer>
-    Consistency beats motivation. Log it, learn from it, move forward.
+    <p>© 2026 Jeremy — All Rights Reserved</p>
 </footer>
-
-<script>
-    // Theme handling
-    (function () {
-        const root = document.documentElement;
-        const toggle = document.getElementById('themeToggle');
-        const icon = document.getElementById('themeIcon');
-
-        function setTheme(theme) {
-            root.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-            icon.textContent = theme === 'dark' ? '🌙' : '☀️';
-        }
-
-        const saved = localStorage.getItem('theme');
-        if (saved === 'light' || saved === 'dark') {
-            setTheme(saved);
-        } else {
-            setTheme('dark');
-        }
-
-        toggle.addEventListener('click', () => {
-            const current = root.getAttribute('data-theme');
-            setTheme(current === 'dark' ? 'light' : 'dark');
-        });
-    })();
-
-    // Scroll reveal
-    const revealElements = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(
-        entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        { threshold: 0.15 }
-    );
-
-    revealElements.forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>

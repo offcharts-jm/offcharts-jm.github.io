@@ -1,242 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7C9HT1W8Z0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-7C9HT1W8Z0');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hire Me - Jeremy Okeke</title>
-
-    <style>
-        :root {
-            --bg-dark: #020617;
-            --card-dark: #0f172a;
-            --accent: #60a5fa;
-            --text-dark: #e5e7eb;
-            --muted-dark: #94a3b8;
-
-            --bg-light: #f9fafb;
-            --card-light: #ffffff;
-            --text-light: #020617;
-            --muted-light: #6b7280;
-        }
-
-        html[data-theme="dark"] {
-            --bg: var(--bg-dark);
-            --card: var(--card-dark);
-            --text: var(--text-dark);
-            --muted: var(--muted-dark);
-        }
-
-        html[data-theme="light"] {
-            --bg: var(--bg-light);
-            --card: var(--card-light);
-            --text: var(--text-light);
-            --muted: var(--muted-light);
-        }
-
-        body {
-            margin: 0;
-            font-family: system-ui, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            transition: background 0.25s ease, color 0.25s ease;
-        }
-
-        nav {
-            background-color: rgba(15, 23, 42, 0.95);
-            padding: 14px 20px;
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            position: sticky;
-            top: 0;
-            z-index: 20;
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-        }
-
-        nav a {
-            color: var(--muted);
-            text-decoration: none;
-            font-size: 15px;
-            text-transform: uppercase;
-        }
-
-        nav a:hover {
-            color: var(--accent);
-        }
-
-        .nav-right {
-            position: absolute;
-            right: 20px;
-            top: 10px;
-        }
-
-        .theme-toggle {
-            width: 34px;
-            height: 34px;
-            border-radius: 999px;
-            border: 1px solid rgba(148, 163, 184, 0.5);
-            background: transparent;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: var(--muted);
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-
-        h1 {
-            font-size: 36px;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: var(--muted);
-            margin-bottom: 40px;
-        }
-
-        .card {
-            background: var(--card);
-            padding: 30px;
-            border-radius: 16px;
-            border: 1px solid rgba(148, 163, 184, 0.25);
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 18px;
-            border-radius: 8px;
-            background: var(--accent);
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 10px;
-        }
-
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            text-align: center;
-            color: var(--muted);
-            border-top: 1px solid rgba(148, 163, 184, 0.25);
-        }
-    </style>
+    <title>Hire Me | Jeremy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="services.html">Services</a>
-    <a href="hire_me.html">Hire Me</a>
-    <a href="premium_tools.html">Premium Tools</a>
-    <a href="contact.html">Contact</a>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="premium_tools.html">Premium Tools</a></li>
+            <li><a href="hire_me.html" class="active">Hire Me</a></li>
+            <li><a href="Jeremy_Okeke.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="request_form.html">Request Tool</a></li>
+            <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <div class="nav-right">
-        <button class="theme-toggle" id="themeToggle">
-            <span id="themeIcon">🌙</span>
-        </button>
-    </div>
-</nav>
-
-<div class="container">
-
+<section class="hire">
     <h1>Hire Me</h1>
-    <p class="subtitle">Need a Python script, automation tool, or custom application? I can build it.</p>
+    <p>I build custom Python tools, automation scripts, websites, and more.</p>
 
-    <div class="card">
-        <h2>⚙️ Python Automation</h2>
-        <p>I create custom automation scripts to save time, reduce manual work, and streamline workflows.</p>
-        <a class="btn" href="request_form.html">Request a Tool</a>
+    <div class="service-card">
+        <h2>Custom Python Tools</h2>
+        <p>Automation, security, data processing — built for your needs.</p>
     </div>
 
-    <div class="card">
-        <h2>🖥️ GUI Applications</h2>
-        <p>Clean, functional desktop apps built with Tkinter — perfect for tools, utilities, and productivity apps.</p>
-        <a class="btn" href="request_form.html">Request a GUI App</a>
+    <div class="service-card">
+        <h2>Website Development</h2>
+        <p>Clean, modern websites built with HTML, CSS, and JavaScript.</p>
     </div>
 
-    <div class="card">
-        <h2>🔐 Security Tools</h2>
-        <p>Password managers, encryption tools, secure utilities — built with safety and reliability in mind.</p>
-        <a class="btn" href="premium_tools.html">Premium Tools</a>
+    <div class="service-card premium">
+        <h2>Ultimate Software Bundle</h2>
+        <p>Get all 21 of my tools in one package.</p>
+        <a href="https://offchartsjm.gumroad.com/l/ultimate-software-bundle" class="btn">Get the Bundle</a>
     </div>
-
-    <div class="card">
-        <h2>🐞 Debugging & Fixes</h2>
-        <p>Got errors? I can fix bugs, clean up code, and improve performance.</p>
-        <a class="btn" href="request_form.html">Request Debugging</a>
-    </div>
-
-</div>
+</section>
 
 <footer>
-    Built by Jeremy Okeke · Learning through projects, one step at a time.
+    <p>© 2026 Jeremy — All Rights Reserved</p>
 </footer>
-
-<script>
-    (function () {
-        const root = document.documentElement;
-        const toggle = document.getElementById('themeToggle');
-        const icon = document.getElementById('themeIcon');
-
-        function setTheme(theme) {
-            root.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-            icon.textContent = theme === 'dark' ? '🌙' : '☀️';
-        }
-
-        const saved = localStorage.getItem('theme');
-        setTheme(saved || 'dark');
-
-        toggle.addEventListener('click', () => {
-            const current = root.getAttribute('data-theme');
-            setTheme(current === 'dark' ? 'light' : 'dark');
-        });
-    })();
-</script>
-
-<!-- FULL EVENT TRACKING -->
-<script>
-document.querySelectorAll('a[href^="http"]').forEach(link => {
-  link.addEventListener('click', () => {
-    gtag('event', 'outbound_click', { event_label: link.href });
-  });
-});
-
-document.querySelectorAll('a[href$=".zip"], a[href$=".exe"]').forEach(download => {
-  download.addEventListener('click', () => {
-    gtag('event', 'download', { event_label: download.href });
-  });
-});
-
-window.addEventListener('scroll', () => {
-  let scrollPercent = Math.round(
-    (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
-  );
-  if (scrollPercent > 25) gtag('event', 'scroll_25');
-  if (scrollPercent > 50) gtag('event', 'scroll_50');
-  if (scrollPercent > 75) gtag('event', 'scroll_75');
-  if (scrollPercent > 90) gtag('event', 'scroll_90');
-});
-</script>
 
 </body>
 </html>
