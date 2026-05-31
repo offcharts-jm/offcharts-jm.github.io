@@ -17,7 +17,7 @@
 }
 
 .github-section p {
-    color: #dce6f5; /* soft white-blue for readability */
+    color: #dce6f5; /* soft white-blue */
     font-size: 18px;
     margin-bottom: 40px;
 }
@@ -26,9 +26,9 @@
    GITHUB CARDS (WHITE + BLUE)
 ----------------------------------- */
 .github-section .project-card {
-    background: #ffffff; /* bright white */
-    color: #0A1A2F; /* navy text */
-    border: 2px solid #1E90FF; /* blue border */
+    background: #ffffff;
+    color: #0A1A2F;
+    border: 2px solid #1E90FF;
     border-radius: 14px;
     padding: 25px;
     box-shadow: 0 4px 14px rgba(0,0,0,0.2);
