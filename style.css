@@ -1,32 +1,33 @@
 /* ------------------------------
-   GLOBAL
+   GLOBAL UI
 --------------------------------*/
 body {
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", Arial, sans-serif;
-    background: #f4f7fb;
-    color: #222;
+    background: #ffffff;
+    color: #0d0d0d;
 }
 
 h1, h2, h3 {
     margin-top: 0;
+    font-weight: 700;
 }
 
 /* ------------------------------
-   NAVIGATION
+   NAVIGATION BAR
 --------------------------------*/
 header {
-    background: #0d0d0d;
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    background: #000000;
+    padding: 18px 0;
+    border-bottom: 2px solid #007bff;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
     padding: 0;
     margin: 0;
 }
@@ -35,14 +36,14 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    padding: 8px 14px;
+    padding: 10px 16px;
     border-radius: 6px;
-    transition: 0.2s;
+    transition: 0.25s;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-    background: #00aaff;
+    background: #007bff;
     color: #fff;
 }
 
@@ -51,35 +52,33 @@ nav ul li a.active {
 --------------------------------*/
 .hero {
     text-align: center;
-    padding: 120px 20px;
-    background: linear-gradient(135deg, #0077ff, #00ccff);
+    padding: 140px 20px;
+    background: linear-gradient(135deg, #001a33, #0044cc);
     color: white;
 }
 
 .hero h1 {
-    font-size: 48px;
-    font-weight: 800;
+    font-size: 50px;
 }
 
 .hero p {
     font-size: 20px;
-    margin-bottom: 25px;
+    opacity: 0.9;
 }
 
 .btn {
     display: inline-block;
-    background: #fff;
-    color: #0077ff;
-    padding: 12px 22px;
-    border-radius: 6px;
+    background: #007bff;
+    color: white;
+    padding: 14px 26px;
+    border-radius: 8px;
     font-weight: bold;
     text-decoration: none;
-    transition: 0.2s;
+    transition: 0.25s;
 }
 
 .btn:hover {
-    background: #0077ff;
-    color: white;
+    background: #0056cc;
 }
 
 /* ------------------------------
@@ -87,20 +86,18 @@ nav ul li a.active {
 --------------------------------*/
 .featured {
     text-align: center;
-    padding: 60px 20px;
+    padding: 70px 20px;
+    background: #f0f4ff;
 }
 
 .featured-box {
     background: white;
-    max-width: 600px;
-    margin: 25px auto;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.featured-box h3 {
-    margin-bottom: 10px;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 14px;
+    border: 2px solid #007bff;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
 /* ------------------------------
@@ -108,62 +105,74 @@ nav ul li a.active {
 --------------------------------*/
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    padding: 40px 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
 }
 
 .project-card {
     background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #d0d0d0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     text-align: center;
-    transition: 0.2s;
+    transition: 0.25s;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    border-color: #007bff;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 /* ------------------------------
-   GITHUB SECTION
+   GITHUB SECTION (BLACK)
 --------------------------------*/
 .github-section {
     text-align: center;
-    padding: 60px 20px;
-    background: #eef6ff;
+    padding: 70px 20px;
+    background: #000000;
+    color: white;
+    border-top: 3px solid #007bff;
+    border-bottom: 3px solid #007bff;
+}
+
+.github-section .btn {
+    background: #007bff;
 }
 
 /* ------------------------------
-   TESTIMONIALS
+   TESTIMONIALS (WHITE + BLUE)
 --------------------------------*/
 .testimonials {
-    padding: 60px 20px;
+    padding: 70px 20px;
     text-align: center;
+    background: #f5f7ff;
 }
 
 .testimonials .project-card {
     font-style: italic;
+    border-left: 4px solid #007bff;
 }
 
 /* ------------------------------
-   CTA SECTION
+   CTA SECTION (DEEP BLUE)
 --------------------------------*/
 .cta {
     text-align: center;
-    padding: 60px 20px;
-    background: #0077ff;
+    padding: 70px 20px;
+    background: #002266;
     color: white;
 }
 
 .cta .btn {
     background: white;
-    color: #0077ff;
+    color: #002266;
 }
 
 .cta .btn:hover {
-    background: #005fcc;
+    background: #007bff;
     color: white;
 }
 
@@ -173,29 +182,29 @@ nav ul li a.active {
 form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
     max-width: 500px;
     margin: auto;
 }
 
 input, textarea {
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
     font-size: 16px;
 }
 
 textarea {
-    height: 120px;
+    height: 130px;
 }
 
 /* ------------------------------
-   FOOTER
+   FOOTER (BLACK)
 --------------------------------*/
 footer {
     text-align: center;
-    padding: 20px;
-    background: #0d0d0d;
+    padding: 25px;
+    background: #000000;
     color: white;
-    margin-top: 40px;
+    border-top: 2px solid #007bff;
 }
