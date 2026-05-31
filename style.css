@@ -1,5 +1,5 @@
 /* ------------------------------
-   GLOBAL UI
+   GLOBAL
 --------------------------------*/
 body {
     margin: 0;
@@ -12,6 +12,7 @@ body {
 h1, h2, h3 {
     margin-top: 0;
     font-weight: 700;
+    color: #0d0d0d;
 }
 
 /* ------------------------------
@@ -20,7 +21,7 @@ h1, h2, h3 {
 header {
     background: #000000;
     padding: 18px 0;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 3px solid #007bff;
 }
 
 nav ul {
@@ -36,7 +37,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    padding: 10px 16px;
+    padding: 10px 18px;
     border-radius: 6px;
     transition: 0.25s;
 }
@@ -53,7 +54,7 @@ nav ul li a.active {
 .hero {
     text-align: center;
     padding: 140px 20px;
-    background: linear-gradient(135deg, #001a33, #0044cc);
+    background: linear-gradient(135deg, #001a33, #0066ff);
     color: white;
 }
 
@@ -63,9 +64,12 @@ nav ul li a.active {
 
 .hero p {
     font-size: 20px;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
+/* ------------------------------
+   BUTTONS
+--------------------------------*/
 .btn {
     display: inline-block;
     background: #007bff;
@@ -75,10 +79,12 @@ nav ul li a.active {
     font-weight: bold;
     text-decoration: none;
     transition: 0.25s;
+    border: 2px solid #0056cc;
 }
 
 .btn:hover {
     background: #0056cc;
+    border-color: #003a99;
 }
 
 /* ------------------------------
@@ -96,8 +102,8 @@ nav ul li a.active {
     margin: 30px auto;
     padding: 30px;
     border-radius: 14px;
-    border: 2px solid #007bff;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    border: 3px solid #007bff;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 /* ------------------------------
@@ -114,8 +120,8 @@ nav ul li a.active {
     background: white;
     padding: 25px;
     border-radius: 14px;
-    border: 1px solid #d0d0d0;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    border: 2px solid #d0d0d0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
     text-align: center;
     transition: 0.25s;
 }
@@ -123,7 +129,7 @@ nav ul li a.active {
 .project-card:hover {
     transform: translateY(-6px);
     border-color: #007bff;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
 /* ------------------------------
@@ -140,10 +146,11 @@ nav ul li a.active {
 
 .github-section .btn {
     background: #007bff;
+    border-color: #0056cc;
 }
 
 /* ------------------------------
-   TESTIMONIALS (WHITE + BLUE)
+   TESTIMONIALS
 --------------------------------*/
 .testimonials {
     padding: 70px 20px;
@@ -169,6 +176,7 @@ nav ul li a.active {
 .cta .btn {
     background: white;
     color: #002266;
+    border-color: #001a55;
 }
 
 .cta .btn:hover {
@@ -190,7 +198,7 @@ form {
 input, textarea {
     padding: 14px;
     border-radius: 8px;
-    border: 1px solid #bbb;
+    border: 2px solid #bbb;
     font-size: 16px;
 }
 
@@ -199,12 +207,12 @@ textarea {
 }
 
 /* ------------------------------
-   FOOTER (BLACK)
+   FOOTER
 --------------------------------*/
 footer {
     text-align: center;
     padding: 25px;
     background: #000000;
     color: white;
-    border-top: 2px solid #007bff;
+    border-top: 3px solid #007bff;
 }
