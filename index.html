@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeremy | Home</title>
+    <title>Jeremy | Software Tools</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -38,25 +38,74 @@
     </nav>
 </header>
 
-<section class="hero">
-    <h1>Automation & Security Tools by Jeremy</h1>
-    <h2>Custom-built Python tools, Windows utilities, and premium scripts.</h2>
-    <a href="projects.html" class="btn">View My Tools</a>
-</section>
+<!-- HERO SECTION -->
+<section class="hero" style="padding: 120px 20px;">
+    <h1 style="font-size: 3.2rem; margin-bottom: 10px;">Powerful Tools for Windows</h1>
+    <h2 style="font-size: 1.5rem; color: #9BBEF9; max-width: 700px; margin: auto;">
+        I build automation tools, data extractors, password managers, and premium software designed for speed, privacy, and simplicity.
+    </h2>
 
-<section class="top-tools">
-    <h2>Featured Tool</h2>
-    <div class="featured-box">
-        <h3>PDF Data Extractor</h3>
-        <p>A powerful Windows app that extracts structured data from PDFs into clean, usable formats.</p>
-        <a href="premium_tools.html" class="btn">View Premium Tools</a>
+    <div style="margin-top: 35px;">
+        <a href="premium_tools.html" class="btn" style="margin-right: 10px;">View Premium Tools</a>
+        <a href="projects.html" class="btn" style="background:#1E293B;">View GitHub Projects</a>
     </div>
 </section>
 
-<section class="cta">
-    <h2>Need Something Custom?</h2>
-    <p>I build custom automation tools, scrapers, and security utilities.</p>
-    <a href="services.html" class="btn">Hire Me</a>
+<!-- FEATURED PREMIUM TOOL -->
+<section class="top-tools">
+    <h2>Featured Tool</h2>
+
+    <div class="featured-box">
+        <h3 style="margin-top:0;">PDF Data Extractor PRO</h3>
+        <p>Extract tables, text, and structured data from PDFs with batch processing and Excel/CSV export.</p>
+        <a href="https://offchartsjm.gumroad.com/l/pdf-extractor-pro" class="btn">Buy £19.99</a>
+    </div>
+</section>
+
+<!-- QUICK PREVIEW OF PREMIUM TOOLS -->
+<section class="top-tools">
+    <h2>Premium Tools</h2>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <h3>Password Manager PRO</h3>
+            <p>A secure AES‑256 encrypted password vault for Windows.</p>
+            <a href="https://offchartsjm.gumroad.com/l/password-manager-pro" class="btn">Buy £5</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Ultimate Software Bundle</h3>
+            <p>All premium tools in one discounted bundle.</p>
+            <a href="https://offchartsjm.gumroad.com/l/ultimate-software-bundle" class="btn">Buy £14.99</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- GITHUB PREVIEW -->
+<section class="top-tools">
+    <h2>GitHub Projects</h2>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <h3>Python Quiz App</h3>
+            <p>A full quiz application built in Python.</p>
+            <a href="https://github.com/offchartsjm/Python-Quiz-App" class="btn">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>PDF Extractor (Free)</h3>
+            <p>The free version of the PDF extractor tool.</p>
+            <a href="https://github.com/offchartsjm/PDF-Extractor" class="btn">View on GitHub</a>
+        </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:20px;">
+        <a href="projects.html" class="btn" style="background:#1E293B;">See All Projects</a>
+    </div>
 </section>
 
 <footer>
@@ -67,7 +116,6 @@
 function toggleMenu() {
     const nav = document.getElementById("nav-links");
     const burger = document.querySelector(".hamburger");
-
     nav.classList.toggle("open");
     burger.classList.toggle("active");
 }
