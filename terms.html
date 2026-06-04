@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Jeremy</title>
+    <title>Terms of Use | Jeremy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,9 +14,7 @@
         <div class="logo">Jeremy</div>
 
         <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
 
         <ul id="nav-links">
@@ -25,62 +23,55 @@
             <li><a href="premium_tools.html">Premium Tools</a></li>
             <li><a href="services.html">Hire Me</a></li>
             <li><a href="Jeremy_Okeke.html">About Me</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="request_form.html">Request Tool</a></li>
+            <li><a href="terms.html" class="active">Terms of Use</a></li>
             <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
         </ul>
     </nav>
 </header>
 
 <section class="hero">
-    <h1>Contact Me</h1>
-    <p>Have a question? Want a custom tool? Reach out anytime.</p>
+    <h1>Terms of Use</h1>
+    <p>By using my tools, you agree to the following terms.</p>
 </section>
 
 <section class="top-tools">
-    <h2>📩 Get In Touch</h2>
+    <h2>Usage Rules</h2>
 
     <div class="project-grid">
 
         <div class="project-card">
-            <h3>Email</h3>
-            <p>You can reach me directly via email.</p>
-            <p><strong>offchartsjm@gmail.com</strong></p>
+            <h3>Personal Use</h3>
+            <p>You may use my tools for personal or business use, but you may not resell them.</p>
         </div>
 
         <div class="project-card">
-            <h3>Gumroad Messages</h3>
-            <p>Contact me through my Gumroad store.</p>
-            <a href="https://offchartsjm.gumroad.com" class="btn">Open Store</a>
+            <h3>No Redistribution</h3>
+            <p>You cannot upload, share, or distribute my tools without permission.</p>
         </div>
 
         <div class="project-card">
-            <h3>Custom Tool Requests</h3>
-            <p>Need a custom Python tool? Submit a request.</p>
-            <a href="request_form.html" class="btn">Request Tool</a>
+            <h3>No Reverse Engineering</h3>
+            <p>Decompiling or modifying the tools is not allowed.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Liability</h3>
+            <p>All tools are provided “as is.” I am not responsible for any damages or data loss.</p>
         </div>
 
     </div>
-</section>
-
-<section class="cta">
-    <h2>Want to Work Together?</h2>
-    <p>I build automation tools, security utilities, and data processors.</p>
-    <a href="services.html" class="btn">View My Services</a>
 </section>
 
 <footer>
     <p>© 2026 Jeremy — All Rights Reserved</p>
 </footer>
 
-<!-- HAMBURGER MENU SCRIPT -->
 <script>
 function toggleMenu() {
-    const nav = document.getElementById("nav-links");
-    const burger = document.querySelector(".hamburger");
-
-    nav.classList.toggle("open");
-    burger.classList.toggle("active");
+    document.getElementById("nav-links").classList.toggle("open");
+    document.querySelector(".hamburger").classList.toggle("active");
 }
 </script>
 

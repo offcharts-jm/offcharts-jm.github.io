@@ -10,8 +10,16 @@
 <body>
 
 <header>
-    <nav>
-        <ul>
+    <nav class="navbar">
+        <div class="logo">Jeremy</div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html" class="active">Projects</a></li>
             <li><a href="premium_tools.html">Premium Tools</a></li>
@@ -24,13 +32,11 @@
     </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero" style="padding: 80px 20px;">
     <h1>My Projects & Tools</h1>
     <p>A collection of my Python tools, software products, and open‑source projects.</p>
 </section>
 
-<!-- SOFTWARE TOOLS -->
 <section class="top-tools">
     <h2>🛠 Software Tools</h2>
 
@@ -69,7 +75,6 @@
     </div>
 </section>
 
-<!-- GITHUB PROJECTS -->
 <section class="github-section" style="background:#0A0F1A; border:none;">
     <h2>💻 Open‑Source GitHub Projects</h2>
     <p>Beginner‑friendly Python projects showcasing my learning and progress.</p>
@@ -102,6 +107,16 @@
 <footer>
     <p>© 2026 Jeremy — All Rights Reserved</p>
 </footer>
+
+<script>
+function toggleMenu() {
+    const nav = document.getElementById("nav-links");
+    const burger = document.querySelector(".hamburger");
+
+    nav.classList.toggle("open");
+    burger.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>

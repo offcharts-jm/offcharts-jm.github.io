@@ -10,8 +10,16 @@
 <body>
 
 <header>
-    <nav>
-        <ul>
+    <nav class="navbar">
+        <div class="logo">Jeremy</div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="premium_tools.html">Premium Tools</a></li>
@@ -139,6 +147,17 @@
 <footer>
     <p>© 2026 Jeremy — All Rights Reserved</p>
 </footer>
+
+<!-- HAMBURGER MENU SCRIPT -->
+<script>
+function toggleMenu() {
+    const nav = document.getElementById("nav-links");
+    const burger = document.querySelector(".hamburger");
+
+    nav.classList.toggle("open");
+    burger.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>

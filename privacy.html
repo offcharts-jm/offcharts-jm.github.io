@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Jeremy</title>
+    <title>Privacy Policy | Jeremy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,9 +14,7 @@
         <div class="logo">Jeremy</div>
 
         <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
 
         <ul id="nav-links">
@@ -25,62 +23,55 @@
             <li><a href="premium_tools.html">Premium Tools</a></li>
             <li><a href="services.html">Hire Me</a></li>
             <li><a href="Jeremy_Okeke.html">About Me</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="request_form.html">Request Tool</a></li>
+            <li><a href="privacy.html" class="active">Privacy Policy</a></li>
             <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
         </ul>
     </nav>
 </header>
 
 <section class="hero">
-    <h1>Contact Me</h1>
-    <p>Have a question? Want a custom tool? Reach out anytime.</p>
+    <h1>Privacy Policy</h1>
+    <p>Your privacy matters. Here’s how your information is handled.</p>
 </section>
 
 <section class="top-tools">
-    <h2>📩 Get In Touch</h2>
+    <h2>Information I Collect</h2>
 
     <div class="project-grid">
 
         <div class="project-card">
-            <h3>Email</h3>
-            <p>You can reach me directly via email.</p>
-            <p><strong>offchartsjm@gmail.com</strong></p>
+            <h3>Purchases</h3>
+            <p>All purchases are handled securely through Gumroad. I do not see or store your payment details.</p>
         </div>
 
         <div class="project-card">
-            <h3>Gumroad Messages</h3>
-            <p>Contact me through my Gumroad store.</p>
-            <a href="https://offchartsjm.gumroad.com" class="btn">Open Store</a>
+            <h3>Emails</h3>
+            <p>If you contact me or submit a request form, I only use your email to reply to you.</p>
         </div>
 
         <div class="project-card">
-            <h3>Custom Tool Requests</h3>
-            <p>Need a custom Python tool? Submit a request.</p>
-            <a href="request_form.html" class="btn">Request Tool</a>
+            <h3>Tool Usage</h3>
+            <p>My tools run offline and do not collect or send any data.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Your Rights</h3>
+            <p>You can request deletion of any personal information you’ve shared with me.</p>
         </div>
 
     </div>
-</section>
-
-<section class="cta">
-    <h2>Want to Work Together?</h2>
-    <p>I build automation tools, security utilities, and data processors.</p>
-    <a href="services.html" class="btn">View My Services</a>
 </section>
 
 <footer>
     <p>© 2026 Jeremy — All Rights Reserved</p>
 </footer>
 
-<!-- HAMBURGER MENU SCRIPT -->
 <script>
 function toggleMenu() {
-    const nav = document.getElementById("nav-links");
-    const burger = document.querySelector(".hamburger");
-
-    nav.classList.toggle("open");
-    burger.classList.toggle("active");
+    document.getElementById("nav-links").classList.toggle("open");
+    document.querySelector(".hamburger").classList.toggle("active");
 }
 </script>
 

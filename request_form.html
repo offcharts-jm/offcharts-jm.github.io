@@ -10,8 +10,16 @@
 <body>
 
 <header>
-    <nav>
-        <ul>
+    <nav class="navbar">
+        <div class="logo">Jeremy</div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="premium_tools.html">Premium Tools</a></li>
@@ -24,23 +32,55 @@
     </nav>
 </header>
 
-<section class="featured">
+<section class="hero">
     <h1>Request a Custom Tool</h1>
-    <p>Tell me what you need and I’ll build it for you.</p>
+    <p>Tell me what you need and I’ll build it.</p>
 </section>
 
-<section>
-    <form action="https://formspree.io/f/mkgwzqgk" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="details" placeholder="Describe the tool you want" required></textarea>
-        <button type="submit" class="btn">Submit Request</button>
-    </form>
+<section class="top-tools">
+    <h2>🛠 Custom Tool Request Form</h2>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <form action="https://formspree.io/f/mqkrjzlv" method="POST">
+
+                <label>Your Name</label>
+                <input type="text" name="name" required>
+
+                <label>Your Email</label>
+                <input type="email" name="email" required>
+
+                <label>Describe the Tool You Need</label>
+                <textarea name="message" rows="6" required></textarea>
+
+                <button type="submit" class="btn">Submit Request</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Need Inspiration?</h2>
+    <p>Check out my existing tools to see what’s possible.</p>
+    <a href="projects.html" class="btn">View My Tools</a>
 </section>
 
 <footer>
     <p>© 2026 Jeremy — All Rights Reserved</p>
 </footer>
+
+<!-- HAMBURGER MENU SCRIPT -->
+<script>
+function toggleMenu() {
+    const nav = document.getElementById("nav-links");
+    const burger = document.querySelector(".hamburger");
+
+    nav.classList.toggle("open");
+    burger.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
