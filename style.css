@@ -1,235 +1,202 @@
-/* -----------------------------------
-   GLOBAL RESET
------------------------------------ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ------------------------------
+   GLOBAL STYLES
+------------------------------ */
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #0A0F1A; /* deep dark navy */
-    color: #E6ECF5; /* soft white-blue */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #05070D;
+    color: #ffffff;
     line-height: 1.6;
 }
 
 h1, h2, h3 {
+    margin: 0 0 10px;
     font-weight: 700;
-    color: #FFFFFF;
 }
 
-/* -----------------------------------
-   NAVIGATION BAR
------------------------------------ */
+p {
+    opacity: 0.85;
+}
+
+/* ------------------------------
+   NAVIGATION
+------------------------------ */
+
 header {
-    background: #000000;
-    padding: 18px 0;
-    border-bottom: 3px solid #1E90FF;
+    background: #0A0F1A;
+    padding: 15px 0;
+    border-bottom: 1px solid #111827;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul li a {
-    color: #E6ECF5;
+nav a {
+    color: #cbd5e1;
     text-decoration: none;
     font-weight: 600;
-    padding: 10px 18px;
-    border-radius: 6px;
-    transition: 0.25s;
+    transition: 0.3s;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    background: #1E90FF;
-    color: white;
+nav a:hover,
+nav a.active {
+    color: #4F9CF9;
 }
 
-/* -----------------------------------
-   HERO SECTION
------------------------------------ */
+/* ------------------------------
+   HERO SECTIONS
+------------------------------ */
+
 .hero {
     text-align: center;
-    padding: 140px 20px;
-    background: linear-gradient(135deg, #0A1A2F, #1E90FF);
-    color: white;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #0A0F1A, #05070D);
 }
 
 .hero h1 {
-    font-size: 50px;
+    font-size: 2.6rem;
 }
 
-.hero p {
-    font-size: 20px;
-    opacity: 0.95;
-}
-
-/* -----------------------------------
-   BUTTONS
------------------------------------ */
-.btn {
-    display: inline-block;
-    background: #1E90FF;
-    color: white;
-    padding: 14px 26px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    border: 2px solid #0A66CC;
-    transition: 0.25s;
-}
-
-.btn:hover {
-    background: #0A66CC;
-    border-color: #084A99;
-}
-
-/* -----------------------------------
-   FEATURED PRODUCT SECTION
------------------------------------ */
-.featured {
-    text-align: center;
-    padding: 70px 20px;
-    background: #0F1624; /* dark navy */
-    color: #E6ECF5;
-}
-
-.featured-box {
-    background: #111A2C;
-    max-width: 650px;
-    margin: 30px auto;
-    padding: 30px;
-    border-radius: 14px;
-    border: 3px solid #1E90FF;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-}
-
-/* -----------------------------------
-   GRID SECTIONS
------------------------------------ */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 50px 20px;
-}
-
-.project-card {
-    background: #111A2C;
-    padding: 25px;
-    border-radius: 14px;
-    border: 2px solid #1E90FF;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
-    text-align: center;
-    transition: 0.25s;
-    color: #E6ECF5;
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-}
-
-/* -----------------------------------
-   GITHUB SECTION
------------------------------------ */
-.github-section {
-    text-align: center;
-    padding: 70px 20px;
-    background: #000000;
-    color: white;
-    border-top: 3px solid #1E90FF;
-    border-bottom: 3px solid #1E90FF;
-}
-
-.github-section h2 {
-    font-size: 36px;
+.hero h2 {
+    font-size: 1.3rem;
+    opacity: 0.8;
     margin-bottom: 10px;
 }
 
-.github-section p {
-    color: #DCE6F5;
-    font-size: 18px;
-    margin-bottom: 40px;
-}
-
-.github-section .project-card {
-    background: #111A2C;
-    border: 2px solid #1E90FF;
-    color: #E6ECF5;
-}
-
-/* -----------------------------------
-   TESTIMONIALS
------------------------------------ */
-.testimonials {
-    padding: 70px 20px;
-    text-align: center;
-    background: #0F1624;
-    color: #E6ECF5;
-}
-
-.testimonials .project-card {
-    font-style: italic;
-    border-left: 4px solid #1E90FF;
-}
-
-/* -----------------------------------
-   CTA SECTION
------------------------------------ */
-.cta {
-    text-align: center;
-    padding: 70px 20px;
-    background: #0A1A2F;
-    color: white;
-}
-
-.cta .btn {
-    background: white;
-    color: #0A1A2F;
-    border-color: #1E90FF;
-}
-
-.cta .btn:hover {
-    background: #1E90FF;
-    color: white;
-}
-
-/* -----------------------------------
-   FORMS
------------------------------------ */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    max-width: 500px;
+.hero p {
+    max-width: 700px;
     margin: auto;
+    opacity: 0.85;
 }
 
-input, textarea {
-    padding: 14px;
-    border-radius: 8px;
-    border: 2px solid #1E90FF;
-    background: #0F1624;
-    color: #E6ECF5;
+/* ------------------------------
+   BUTTONS
+------------------------------ */
+
+.btn {
+    display: inline-block;
+    background: #4F9CF9;
+    padding: 12px 22px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
 }
 
-textarea {
-    height: 130px;
+.btn:hover {
+    background: #1E7BEF;
 }
 
-/* -----------------------------------
+/* ------------------------------
+   SECTIONS
+------------------------------ */
+
+section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+/* ------------------------------
+   FEATURED BOX
+------------------------------ */
+
+.featured-box {
+    background: #0A0F1A;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #1a2333;
+}
+
+.featured-box h3 {
+    margin-bottom: 10px;
+}
+
+/* ------------------------------
+   GRID LAYOUT
+------------------------------ */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* ------------------------------
+   PROJECT CARDS
+------------------------------ */
+
+.project-card {
+    background: #0A0F1A;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #1a2333;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #4F9CF9;
+}
+
+/* ------------------------------
+   CTA SECTION
+------------------------------ */
+
+.cta {
+    background: #0A0F1A;
+    padding: 80px 20px;
+    border-top: 1px solid #111827;
+}
+
+.cta p {
+    opacity: 0.85;
+}
+
+/* ------------------------------
    FOOTER
------------------------------------ */
+------------------------------ */
+
 footer {
     text-align: center;
-    padding: 25px;
-    background: #000000;
-    color: white;
-    border-top: 3px solid #1E90FF;
+    padding: 20px;
+    background: #05070D;
+    border-top: 1px solid #111827;
+    opacity: 0.7;
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
 }
