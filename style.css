@@ -110,12 +110,12 @@ footer {
 }
 
 /* ------------------------------
-   NAVIGATION (FIXED + CLEAN)
+   NAVIGATION (CENTERED)
 ------------------------------ */
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 15px 25px;
     background: #0A0F1A;
@@ -124,13 +124,6 @@ footer {
     z-index: 1000;
 }
 
-.logo {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #4F9CF9;
-}
-
-/* Desktop nav */
 #nav-links {
     display: flex;
     gap: 25px;
@@ -148,12 +141,63 @@ footer {
     background: #1E293B;
 }
 
-/* Hamburger icon */
+/* ------------------------------
+   DROPDOWN (FADE + SLIDE)
+------------------------------ */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: #111827;
+    border: 1px solid #1F2937;
+    border-radius: 8px;
+    padding: 10px 0;
+    list-style: none;
+    min-width: 160px;
+
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background: #1E293B;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* ------------------------------
+   MOBILE NAVIGATION
+------------------------------ */
+
 .hamburger {
     display: none;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    position: absolute;
+    left: 20px;
 }
 
 .hamburger span {
@@ -164,10 +208,6 @@ footer {
     transition: 0.3s ease;
 }
 
-/* ------------------------------
-   MOBILE NAVIGATION (FIXED)
------------------------------- */
-
 @media (max-width: 768px) {
 
     .hamburger {
@@ -177,7 +217,7 @@ footer {
     #nav-links {
         position: absolute;
         top: 65px;
-        right: 0;
+        left: 0;
         width: 100%;
         background: #0A0F1A;
         flex-direction: column;
@@ -189,12 +229,27 @@ footer {
     }
 
     #nav-links.open {
-        max-height: 500px;
+        max-height: 600px;
         padding: 20px 0;
     }
 
     #nav-links li {
         margin: 12px 0;
+    }
+
+    /* Mobile dropdown inside menu */
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        border: none;
+        background: none;
+        padding: 0;
+    }
+
+    .dropdown-menu li a {
+        padding: 10px 0;
     }
 
     /* Hamburger animation */

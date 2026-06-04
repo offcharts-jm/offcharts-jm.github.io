@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Jeremy Okeke</title>
+    <title>Projects | Jeremy</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
     <nav class="navbar">
-        <div class="logo">Jeremy</div>
 
         <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
 
         <ul id="nav-links">
@@ -27,81 +23,48 @@
             <li><a href="Jeremy_Okeke.html">About Me</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="request_form.html">Request Tool</a></li>
-            <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+
+            <li class="dropdown">
+                <a class="dropdown-btn">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+                </ul>
+            </li>
         </ul>
+
     </nav>
 </header>
 
-<section class="hero" style="padding: 80px 20px;">
-    <h1>My Projects & Tools</h1>
-    <p>A collection of my Python tools, software products, and open‑source projects.</p>
+<section class="hero">
+    <h1>Projects</h1>
+    <h2>Free tools, experiments, and public projects.</h2>
 </section>
 
 <section class="top-tools">
-    <h2>🛠 Software Tools</h2>
-
-    <div class="project-grid">
-
-        <div class="project-card">
-            <h3>PDF Data Extractor</h3>
-            <p>Extract text & tables instantly from any PDF.</p>
-            <a href="https://offchartsjm.gumroad.com/l/pdf-data-extractor" class="btn">Download</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Password Manager PRO</h3>
-            <p>AES‑256 encrypted password vault with secure offline storage.</p>
-            <a href="https://offchartsjm.gumroad.com/l/password-manager-pro" class="btn">Buy</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Automation Toolkit</h3>
-            <p>6 tools for file management and workflow automation.</p>
-            <a href="https://offchartsjm.gumroad.com/l/automation-toolkit" class="btn">Buy</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Security Tools Pack</h3>
-            <p>Encryption, hashing, secure notes, password generation, and more.</p>
-            <a href="https://offchartsjm.gumroad.com/l/security-tools-pack" class="btn">Buy</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Data Tools Bundle</h3>
-            <p>Tools for cleaning, converting, formatting, and analysing data instantly.</p>
-            <a href="https://offchartsjm.gumroad.com/l/data-tools-bundle" class="btn">Buy</a>
-        </div>
-
-    </div>
-</section>
-
-<section class="github-section" style="background:#0A0F1A; border:none;">
-    <h2>💻 Open‑Source GitHub Projects</h2>
-    <p>Beginner‑friendly Python projects showcasing my learning and progress.</p>
+    <h2>My Projects</h2>
 
     <div class="project-grid">
 
         <div class="project-card">
             <h3>Python Quiz App</h3>
             <p>A beginner-friendly quiz application built with Python.</p>
-            <a href="https://github.com/offcharts-jm/python_quiz_app" class="btn">View on GitHub</a>
+            <a href="https://github.com/" class="btn">View on GitHub</a>
         </div>
 
         <div class="project-card">
-            <h3>Calculator</h3>
-            <p>A simple Python calculator with clean logic.</p>
-            <a href="https://github.com/offcharts-jm/python_calculator" class="btn">View on GitHub</a>
+            <h3>Automation Scripts</h3>
+            <p>Small utilities to speed up repetitive tasks.</p>
         </div>
 
         <div class="project-card">
-            <h3>Number Guessing Game</h3>
-            <p>A fun Python guessing game using loops and random numbers.</p>
-            <a href="https://github.com/offcharts-jm/number_guessing_game" class="btn">View on GitHub</a>
+            <h3>Data Tools</h3>
+            <p>Scripts for cleaning, parsing, and transforming data.</p>
         </div>
 
     </div>
-
-    <a href="https://github.com/offcharts-jm" class="btn" style="margin-top:40px;">Visit My GitHub</a>
 </section>
 
 <footer>

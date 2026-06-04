@@ -6,17 +6,13 @@
     <title>Premium Tools | Jeremy</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
     <nav class="navbar">
-        <div class="logo">Jeremy</div>
 
         <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
 
         <ul id="nav-links">
@@ -27,50 +23,54 @@
             <li><a href="Jeremy_Okeke.html">About Me</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="request_form.html">Request Tool</a></li>
-            <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+
+            <li class="dropdown">
+                <a class="dropdown-btn">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+                </ul>
+            </li>
         </ul>
+
     </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
     <h1>Premium Tools</h1>
-    <p>Exclusive high‑end software built for automation, security, and data processing.</p>
+    <h2>High-quality Windows tools built for real workflows.</h2>
 </section>
 
-<!-- PREMIUM TOOLS ONLY -->
 <section class="top-tools">
-    <h2>⭐ Premium Software</h2>
+    <h2>Available Tools</h2>
 
     <div class="project-grid">
 
         <div class="project-card">
-            <h3>PDF Data Extractor PRO</h3>
-            <p>OCR, batch processing, DOCX export, image extraction & more.</p>
-            <a href="https://offchartsjm.gumroad.com/l/pdf-extractor-pro" class="btn">Buy Now</a>
+            <h3>PDF Data Extractor</h3>
+            <p>Extracts structured data from PDFs into CSV/Excel formats.</p>
+            <a href="https://offchartsjm.gumroad.com" class="btn">View on Gumroad</a>
         </div>
 
         <div class="project-card">
-            <h3>Ultimate Software Bundle</h3>
-            <p>21 tools for automation, security, data processing & productivity.</p>
-            <a href="https://offchartsjm.gumroad.com/l/ultimate-software-bundle" class="btn">Buy Bundle</a>
+            <h3>Security Utility</h3>
+            <p>Planned security-focused tools for Windows environments.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Automation Packs</h3>
+            <p>Bundles of scripts and tools for power users.</p>
         </div>
 
     </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-    <h2>Need Something Custom?</h2>
-    <p>I build custom Python tools for automation, security, and data processing.</p>
-    <a href="request_form.html" class="btn">Request a Custom Tool</a>
 </section>
 
 <footer>
     <p>© 2026 Jeremy — All Rights Reserved</p>
 </footer>
 
-<!-- HAMBURGER MENU SCRIPT -->
 <script>
 function toggleMenu() {
     const nav = document.getElementById("nav-links");

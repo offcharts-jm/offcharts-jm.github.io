@@ -6,12 +6,10 @@
     <title>Terms of Use | Jeremy</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
     <nav class="navbar">
-        <div class="logo">Jeremy</div>
 
         <div class="hamburger" onclick="toggleMenu()">
             <span></span><span></span><span></span>
@@ -25,9 +23,18 @@
             <li><a href="Jeremy_Okeke.html">About Me</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="request_form.html">Request Tool</a></li>
-            <li><a href="terms.html" class="active">Terms of Use</a></li>
-            <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+
+            <li class="dropdown">
+                <a class="dropdown-btn">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="active">Terms</a></li>
+                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+                </ul>
+            </li>
         </ul>
+
     </nav>
 </header>
 
@@ -43,12 +50,12 @@
 
         <div class="project-card">
             <h3>Personal Use</h3>
-            <p>You may use my tools for personal or business use, but you may not resell them.</p>
+            <p>You may use my tools for personal or business use.</p>
         </div>
 
         <div class="project-card">
             <h3>No Redistribution</h3>
-            <p>You cannot upload, share, or distribute my tools without permission.</p>
+            <p>You cannot upload, share, or distribute my tools.</p>
         </div>
 
         <div class="project-card">
@@ -58,7 +65,7 @@
 
         <div class="project-card">
             <h3>Liability</h3>
-            <p>All tools are provided “as is.” I am not responsible for any damages or data loss.</p>
+            <p>Tools are provided “as is.” I am not responsible for damages.</p>
         </div>
 
     </div>
@@ -70,8 +77,11 @@
 
 <script>
 function toggleMenu() {
-    document.getElementById("nav-links").classList.toggle("open");
-    document.querySelector(".hamburger").classList.toggle("active");
+    const nav = document.getElementById("nav-links");
+    const burger = document.querySelector(".hamburger");
+
+    nav.classList.toggle("open");
+    burger.classList.toggle("active");
 }
 </script>
 

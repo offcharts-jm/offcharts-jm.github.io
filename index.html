@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeremy | Developer Portfolio</title>
+    <title>Jeremy | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
     <nav class="navbar">
-        <div class="logo">Jeremy</div>
 
         <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
 
         <ul id="nav-links">
@@ -27,128 +23,46 @@
             <li><a href="Jeremy_Okeke.html">About Me</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="request_form.html">Request Tool</a></li>
-            <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+
+            <li class="dropdown">
+                <a class="dropdown-btn">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+                </ul>
+            </li>
         </ul>
+
     </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-    <h1>Jeremy Okeke</h1>
-    <h2>Python Developer • Automation • Security • Data Tools</h2>
-    <p>I build automation tools, security utilities, data processors, and offline software bundles.</p>
-    <a href="#featured" class="btn">Explore My Best Tools</a>
+    <h1>Automation & Security Tools by Jeremy</h1>
+    <h2>Custom-built Python tools, Windows utilities, and premium scripts.</h2>
+    <a href="projects.html" class="btn">View My Tools</a>
 </section>
 
-<!-- FEATURED PRODUCT -->
-<section id="featured" class="featured">
-    <h2>🔥 Featured Tool: Ultimate Software Bundle</h2>
-    <p>21 Python tools for automation, security, data processing, and password management.</p>
-
-    <div class="featured-box">
-        <h3>Ultimate Software Bundle</h3>
-        <p><strong>£14.99</strong> — Pay in 3 installments</p>
-        <p>Includes: Automation Toolkit, Security Pack, Data Tools, Password Manager PRO, and more.</p>
-        <a href="https://offchartsjm.gumroad.com/l/ultimate-software-bundle" class="btn">Buy Now</a>
-    </div>
-</section>
-
-<!-- PREMIUM TOOLS -->
 <section class="top-tools">
-    <h2>⭐ Most Popular Tools</h2>
-
-    <div class="project-grid">
-
-        <div class="project-card">
-            <h3>Password Manager PRO</h3>
-            <p>AES‑256 encrypted password vault with secure offline storage.</p>
-            <a href="https://offchartsjm.gumroad.com/l/password-manager-pro" class="btn">Buy</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Automation Toolkit</h3>
-            <p>6 tools for file management and workflow automation.</p>
-            <a href="https://offchartsjm.gumroad.com/l/automation-toolkit" class="btn">Buy</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Security Tools Pack</h3>
-            <p>Encryption, hashing, secure notes, password generation, and more.</p>
-            <a href="https://offchartsjm.gumroad.com/l/security-tools-pack" class="btn">Buy</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Data Tools Bundle</h3>
-            <p>Tools for cleaning, converting, formatting, and analysing data instantly.</p>
-            <a href="https://offchartsjm.gumroad.com/l/data-tools-bundle" class="btn">Buy</a>
-        </div>
-
+    <h2>Featured Tool</h2>
+    <div class="featured-box">
+        <h3>PDF Data Extractor</h3>
+        <p>A powerful Windows app that extracts structured data from PDFs into clean, usable formats.</p>
+        <a href="premium_tools.html" class="btn">View Premium Tools</a>
     </div>
 </section>
 
-<!-- GITHUB SECTION -->
-<section class="github-section">
-    <h2>💻 My GitHub</h2>
-    <p>I build open‑source Python tools, automation scripts, and beginner‑friendly projects.</p>
-
-    <div class="project-grid">
-
-        <div class="project-card">
-            <h3>Python Quiz App</h3>
-            <p>A beginner-friendly quiz application built with Python.</p>
-            <a href="https://github.com/offcharts-jm/python_quiz_app" class="btn">View</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Calculator</h3>
-            <p>A simple Python calculator with clean logic.</p>
-            <a href="https://github.com/offcharts-jm/python_calculator" class="btn">View</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Number Guessing Game</h3>
-            <p>A fun Python guessing game using loops and random numbers.</p>
-            <a href="https://github.com/offcharts-jm/number_guessing_game" class="btn">View</a>
-        </div>
-
-    </div>
-
-    <a href="https://github.com/offcharts-jm" class="btn">Visit My GitHub</a>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-    <h2>💬 What People Say</h2>
-
-    <div class="project-grid">
-
-        <div class="project-card">
-            <p>“Clean tools that actually work.”</p>
-        </div>
-
-        <div class="project-card">
-            <p>“Perfect for beginners learning Python.”</p>
-        </div>
-
-        <div class="project-card">
-            <p>“The automation toolkit saved me hours.”</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- CTA -->
 <section class="cta">
-    <h2>Want to support my work?</h2>
-    <p>Check out my premium tools and software bundles.</p>
-    <a href="premium_tools.html" class="btn">View Premium Tools</a>
+    <h2>Need Something Custom?</h2>
+    <p>I build custom automation tools, scrapers, and security utilities.</p>
+    <a href="services.html" class="btn">Hire Me</a>
 </section>
 
 <footer>
     <p>© 2026 Jeremy — All Rights Reserved</p>
 </footer>
 
-<!-- HAMBURGER MENU SCRIPT -->
 <script>
 function toggleMenu() {
     const nav = document.getElementById("nav-links");

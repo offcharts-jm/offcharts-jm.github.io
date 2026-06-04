@@ -6,17 +6,13 @@
     <title>Hire Me | Jeremy</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
     <nav class="navbar">
-        <div class="logo">Jeremy</div>
 
         <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
 
         <ul id="nav-links">
@@ -27,55 +23,59 @@
             <li><a href="Jeremy_Okeke.html">About Me</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="request_form.html">Request Tool</a></li>
-            <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+
+            <li class="dropdown">
+                <a class="dropdown-btn">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+                </ul>
+            </li>
         </ul>
+
     </nav>
 </header>
 
 <section class="hero">
     <h1>Hire Me</h1>
-    <p>I build custom Python tools, automation scripts, security utilities, and data processors.</p>
+    <h2>I build custom tools, automations, and utilities.</h2>
 </section>
 
 <section class="top-tools">
-    <h2>💼 Services I Offer</h2>
+    <h2>Services</h2>
 
     <div class="project-grid">
 
         <div class="project-card">
             <h3>Custom Python Tools</h3>
-            <p>Need a custom automation script or data tool? I can build it.</p>
+            <p>Automation, data processing, and custom scripts tailored to your workflow.</p>
         </div>
 
         <div class="project-card">
-            <h3>Security Utilities</h3>
-            <p>Password tools, encryption utilities, secure storage systems, and more.</p>
+            <h3>Windows Utilities</h3>
+            <p>Standalone EXE tools for non-technical users.</p>
         </div>
 
         <div class="project-card">
-            <h3>Data Processing Tools</h3>
-            <p>PDF extraction, CSV processing, formatting tools, converters, and more.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Automation Scripts</h3>
-            <p>File sorting, renaming, cleaning, and workflow automation.</p>
+            <h3>Tool Optimization</h3>
+            <p>Improve performance, UX, and reliability of existing tools.</p>
         </div>
 
     </div>
 </section>
 
 <section class="cta">
-    <h2>Ready to Get Started?</h2>
-    <p>Tell me what you need and I’ll build it.</p>
-    <a href="request_form.html" class="btn">Request a Custom Tool</a>
+    <h2>Ready to Start?</h2>
+    <p>Tell me what you need and I’ll get back to you.</p>
+    <a href="contact.html" class="btn">Contact Me</a>
 </section>
 
 <footer>
     <p>© 2026 Jeremy — All Rights Reserved</p>
 </footer>
 
-<!-- HAMBURGER MENU SCRIPT -->
 <script>
 function toggleMenu() {
     const nav = document.getElementById("nav-links");

@@ -6,12 +6,10 @@
     <title>Privacy Policy | Jeremy</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
     <nav class="navbar">
-        <div class="logo">Jeremy</div>
 
         <div class="hamburger" onclick="toggleMenu()">
             <span></span><span></span><span></span>
@@ -25,9 +23,18 @@
             <li><a href="Jeremy_Okeke.html">About Me</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="request_form.html">Request Tool</a></li>
-            <li><a href="privacy.html" class="active">Privacy Policy</a></li>
-            <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+
+            <li class="dropdown">
+                <a class="dropdown-btn">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html" class="active">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+                </ul>
+            </li>
         </ul>
+
     </nav>
 </header>
 
@@ -43,22 +50,22 @@
 
         <div class="project-card">
             <h3>Purchases</h3>
-            <p>All purchases are handled securely through Gumroad. I do not see or store your payment details.</p>
+            <p>Handled securely by Gumroad. I do not see your payment details.</p>
         </div>
 
         <div class="project-card">
             <h3>Emails</h3>
-            <p>If you contact me or submit a request form, I only use your email to reply to you.</p>
+            <p>I only use your email to reply to you.</p>
         </div>
 
         <div class="project-card">
             <h3>Tool Usage</h3>
-            <p>My tools run offline and do not collect or send any data.</p>
+            <p>All tools run offline and collect no data.</p>
         </div>
 
         <div class="project-card">
             <h3>Your Rights</h3>
-            <p>You can request deletion of any personal information you’ve shared with me.</p>
+            <p>You may request deletion of any personal information.</p>
         </div>
 
     </div>
@@ -70,8 +77,11 @@
 
 <script>
 function toggleMenu() {
-    document.getElementById("nav-links").classList.toggle("open");
-    document.querySelector(".hamburger").classList.toggle("active");
+    const nav = document.getElementById("nav-links");
+    const burger = document.querySelector(".hamburger");
+
+    nav.classList.toggle("open");
+    burger.classList.toggle("active");
 }
 </script>
 
