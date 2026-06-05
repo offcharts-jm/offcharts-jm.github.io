@@ -40,37 +40,48 @@
 
 <section class="hero">
     <h1>Request a Custom Tool</h1>
-    <p>Tell me what you need and I’ll build it.</p>
+    <p>Tell me what you need — I’ll build it.</p>
 </section>
 
 <section class="top-tools">
     <h2>🛠 Custom Tool Request Form</h2>
 
-    <div class="project-grid">
+    <div class="form-container">
 
-        <div class="project-card">
-            <form action="https://formspree.io/f/mqkrjzlv" method="POST">
+        <form action="https://formspree.io/f/mqkrjzlv" method="POST">
 
-                <label>Your Name</label>
-                <input type="text" name="name" required>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" required>
+                </div>
 
-                <label>Your Email</label>
-                <input type="email" name="email" required>
+                <div class="form-group">
+                    <label>Your Email</label>
+                    <input type="email" name="email" required>
+                </div>
+            </div>
 
+            <div class="form-group">
+                <label>Tool Name / Title</label>
+                <input type="text" name="tool_title" placeholder="e.g., Invoice Generator, Data Cleaner" required>
+            </div>
+
+            <div class="form-group">
                 <label>Describe the Tool You Need</label>
-                <textarea name="message" rows="6" required></textarea>
+                <textarea name="message" rows="7" placeholder="Explain what the tool should do, features, inputs, outputs…" required></textarea>
+            </div>
 
-                <button type="submit" class="btn">Submit Request</button>
-            </form>
-        </div>
+            <div class="form-group">
+                <label>Deadline (Optional)</label>
+                <input type="text" name="deadline" placeholder="e.g., 1 week, ASAP, no deadline">
+            </div>
+
+            <button type="submit" class="btn" style="margin-top: 10px;">Submit Request</button>
+
+        </form>
 
     </div>
-</section>
-
-<section class="cta">
-    <h2>Need Inspiration?</h2>
-    <p>Check out my existing tools to see what’s possible.</p>
-    <a href="projects.html" class="btn">View My Tools</a>
 </section>
 
 <footer>
@@ -81,7 +92,6 @@
 function toggleMenu() {
     const nav = document.getElementById("nav-links");
     const burger = document.querySelector(".hamburger");
-
     nav.classList.toggle("open");
     burger.classList.toggle("active");
 }
