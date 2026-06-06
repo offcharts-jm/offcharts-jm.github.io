@@ -109,7 +109,7 @@ a, a:visited {
 ----------------------------------- */
 .hero {
     text-align: center;
-    padding: 90px 20px;
+    padding: 70px 20px;
     background: linear-gradient(180deg, #0B0F19 0%, #0F1522 100%);
     border-bottom: 1px solid var(--border);
 }
@@ -147,16 +147,29 @@ a, a:visited {
 }
 
 /* -----------------------------------
-   CARD GRID — MATCHES MOCKUP
+   CARD GRID — MOBILE + DESKTOP FIXED
 ----------------------------------- */
 .project-grid {
     display: grid;
-    grid-template-columns: 1fr;
     gap: 22px;
     padding: 20px 0;
+    grid-template-columns: 1fr;
 }
 
-/* Card with icon support */
+/* Desktop layout */
+@media (min-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1100px) {
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Card */
 .project-card {
     background: var(--glass);
     backdrop-filter: blur(10px);
@@ -168,13 +181,6 @@ a, a:visited {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-/* Icon inside card */
-.project-card::before {
-    content: "🔧";
-    font-size: 2rem;
-    margin-bottom: 5px;
 }
 
 /* Hover effect */
@@ -247,7 +253,7 @@ a, a:visited {
 }
 
 /* -----------------------------------
-   MOBILE NAVIGATION
+   MOBILE NAVIGATION FIXES
 ----------------------------------- */
 .hamburger {
     display: none;
@@ -266,6 +272,7 @@ a, a:visited {
     transition: var(--transition);
 }
 
+/* Mobile menu */
 @media (max-width: 768px) {
 
     .hamburger { display: flex; }
@@ -284,21 +291,23 @@ a, a:visited {
         border-bottom: 1px solid var(--border);
     }
 
+    /* FIX: allow full dropdown height */
     #nav-links.open {
-        max-height: 600px;
+        max-height: 1000px;
         padding: 20px 0;
     }
 
     #nav-links li { margin: 12px 0; }
 
+    /* FIX: dropdown menu showing all items */
     .dropdown-menu {
         position: static;
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto;
-        border: none;
-        background: none;
-        padding: 0;
+        background: var(--card);
+        border: 1px solid var(--border);
+        padding: 10px 0;
         box-shadow: none;
     }
 
@@ -312,9 +321,5 @@ a, a:visited {
 
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translateY(-8px);
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
     }
 }
