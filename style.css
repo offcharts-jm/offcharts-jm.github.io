@@ -29,6 +29,12 @@ body {
     scroll-behavior: smooth;
 }
 
+/* REMOVE ALL DEFAULT UNDERLINES */
+a, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
 h1, h2, h3 {
     color: var(--accent);
     margin-top: 0;
