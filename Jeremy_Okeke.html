@@ -3,77 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Jeremy Okeke</title>
+    <title>About Me | Jeremy</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- NAVBAR -->
+<header>
     <nav class="navbar">
-        <div class="nav-left">
-            <div class="j-logo">J</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
         </div>
 
         <ul id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="premium_tools.html">Premium Tools</a></li>
+            <li><a href="services.html">Hire Me</a></li>
             <li><a href="Jeremy_Okeke.html" class="active">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="request_form.html">Request Tool</a></li>
 
             <li class="dropdown">
                 <a class="dropdown-btn">More ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
                     <li><a href="terms.html">Terms</a></li>
-                    <li><a href="store.html">Store</a></li>
+                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
                 </ul>
             </li>
         </ul>
-
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span><span></span><span></span>
-        </div>
     </nav>
+</header>
 
-    <!-- ABOUT ME -->
-    <section class="about-hero">
-        <h1>Hello! I’m Jeremy Okeke.</h1>
-        <h2>Developer creating simple, fast and beginner‑friendly tools.</h2>
+<section class="hero">
+    <div class="hero-inner">
+        <h1>About Me</h1>
+        <p>My journey, skills, and mission.</p>
+    </div>
+</section>
 
+<section class="top-tools">
+    <h2>Who I Am</h2>
+
+    <div class="featured-box">
         <p>
-            I build automation apps, data extractors, password managers and premium Windows software 
-            designed with clarity, speed and real‑world usefulness in mind. My goal is to help beginners 
-            learn faster and professionals work smarter through clean, lightweight tools that just make sense.
+            I'm Jeremy Okeke — a developer focused on building simple, fast, and beginner‑friendly tools.
+            I create automation apps, data extractors, password managers, and premium Windows software
+            designed for real‑world usefulness.
         </p>
+    </div>
+</section>
 
-        <p>
-            Outside of coding, I’m always experimenting with new ideas, improving my tools, and finding 
-            better ways to simplify complex tasks. I believe great software should feel effortless — 
-            and that’s what I aim to create.
-        </p>
+<footer>
+    <p>© 2026 Jeremy — All Rights Reserved</p>
+</footer>
 
-        <p class="signature">— Jeremy</p>
-    </section>
-
-    <script>
-        function toggleMenu() {
-            const nav = document.getElementById("nav-links");
-            const burger = document.querySelector(".hamburger");
-            nav.classList.toggle("open");
-            burger.classList.toggle("active");
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const dropdownBtn = document.querySelector(".dropdown-btn");
-            const dropdown = document.querySelector(".dropdown");
-
-            dropdownBtn.addEventListener("click", () => {
-                dropdown.classList.toggle("open");
-            });
-        });
-    </script>
+<script>
+function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("open");
+}
+document.querySelector(".dropdown-btn").onclick = () =>
+    document.querySelector(".dropdown").classList.toggle("open");
+</script>
 
 </body>
 </html>

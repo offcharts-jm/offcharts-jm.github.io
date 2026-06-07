@@ -9,70 +9,47 @@
 <body>
 
 <header>
-<nav class="navbar">
-    <div class="nav-left">
-        <div class="j-logo">J</div>
-    </div>
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
 
-    <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="premium_tools.html">Premium Tools</a></li>
-        <li><a href="Jeremy_Okeke.html">About Me</a></li>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="premium_tools.html">Premium Tools</a></li>
+            <li><a href="services.html">Hire Me</a></li>
+            <li><a href="Jeremy_Okeke.html">About Me</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="request_form.html">Request Tool</a></li>
 
-        <li class="dropdown">
-            <a class="dropdown-btn">More ▼</a>
-            <ul class="dropdown-menu">
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="privacy_policy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms</a></li>
-                <li><a href="store.html">Store</a></li>
-            </ul>
-        </li>
-    </ul>
-
-    <div class="hamburger" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-    </div>
-</nav>
-
+            <li class="dropdown">
+                <a class="dropdown-btn">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 </header>
 
 <section class="hero">
-    <h1>Contact Me</h1>
-    <p>Have a question? Want a custom tool? Reach out anytime.</p>
-</section>
-
-<section class="top-tools">
-    <h2>📩 Get In Touch</h2>
-
-    <div class="project-grid">
-
-        <div class="project-card">
-            <h3>Email</h3>
-            <p>You can reach me directly via email.</p>
-            <p><strong>jeremyokeke11@gmail.com</strong></p>
-        </div>
-
-        <div class="project-card">
-            <h3>Gumroad Messages</h3>
-            <p>Contact me through my Gumroad store.</p>
-            <a href="https://offchartsjm.gumroad.com" class="btn">Open Store</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Custom Tool Requests</h3>
-            <p>Need a custom Python tool? Submit a request.</p>
-            <a href="request_form.html" class="btn">Request Tool</a>
-        </div>
-
+    <div class="hero-inner">
+        <h1>Contact</h1>
+        <p>Get in touch with me.</p>
     </div>
 </section>
 
-<section class="cta">
-    <h2>Want to Work Together?</h2>
-    <p>I build automation tools, security utilities, and data processors.</p>
-    <a href="services.html" class="btn">View My Services</a>
+<section class="top-tools">
+    <h2>Reach Out</h2>
+
+    <div class="featured-box">
+        <p>Email: <strong>offchartsjm@gmail.com</strong></p>
+        <p>GitHub: <strong>github.com/offcharts-jm</strong></p>
+    </div>
 </section>
 
 <footer>
@@ -81,22 +58,11 @@
 
 <script>
 function toggleMenu() {
-    const nav = document.getElementById("nav-links");
-    const burger = document.querySelector(".hamburger");
-    nav.classList.toggle("open");
-    burger.classList.toggle("active");
+    document.getElementById("nav-links").classList.toggle("open");
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    const dropdownBtn = document.querySelector(".dropdown-btn");
-    const dropdown = document.querySelector(".dropdown");
-
-    dropdownBtn.addEventListener("click", () => {
-        dropdown.classList.toggle("open");
-    });
-});
+document.querySelector(".dropdown-btn").onclick = () =>
+    document.querySelector(".dropdown").classList.toggle("open");
 </script>
-
 
 </body>
 </html>

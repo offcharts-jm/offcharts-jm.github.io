@@ -3,95 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Use | Jeremy</title>
+    <title>Terms | Jeremy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-<nav class="navbar">
-    <div class="nav-left">
-        <div class="j-logo">J</div>
-    </div>
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
 
-    <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="premium_tools.html">Premium Tools</a></li>
-        <li><a href="Jeremy_Okeke.html">About Me</a></li>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="premium_tools.html">Premium Tools</a></li>
+            <li><a href="services.html">Hire Me</a></li>
+            <li><a href="Jeremy_Okeke.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="request_form.html">Request Tool</a></li>
 
-        <li class="dropdown">
-            <a class="dropdown-btn">More ▼</a>
-            <ul class="dropdown-menu">
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="privacy_policy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms</a></li>
-                <li><a href="store.html">Store</a></li>
-            </ul>
-        </li>
-    </ul>
-
-    <div class="hamburger" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-    </div>
-</nav>
-
+            <li class="dropdown">
+                <a class="dropdown-btn">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="active">Terms</a></li>
+                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 </header>
 
 <section class="hero">
-    <h1>Terms of Use</h1>
-    <p>By using my tools, you agree to the following terms.</p>
-</section>
-
-<section class="top-tools">
-    <h2>Usage Rules</h2>
-
-    <div class="project-grid">
-
-        <div class="project-card">
-            <h3>Personal Use</h3>
-            <p>You may use my tools for personal or business use.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>No Redistribution</h3>
-            <p>You cannot upload, share, or distribute my tools.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>No Reverse Engineering</h3>
-            <p>Decompiling or modifying the tools is not allowed.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Liability</h3>
-            <p>Tools are provided “as is.” I am not responsible for damages.</p>
-        </div>
-
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 Jeremy — All Rights Reserved</p>
-</footer>
-
-<script>
-function toggleMenu() {
-    const nav = document.getElementById("nav-links");
-    const burger = document.querySelector(".hamburger");
-    nav.classList.toggle("open");
-    burger.classList.toggle("active");
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const dropdownBtn = document.querySelector(".dropdown-btn");
-    const dropdown = document.querySelector(".dropdown");
-
-    dropdownBtn.addEventListener("click", () => {
-        dropdown.classList.toggle("open");
-    });
-});
-</script>
-
-</body>
-</html>
+    <div class="hero-inner">

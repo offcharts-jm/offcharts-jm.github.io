@@ -9,65 +9,46 @@
 <body>
 
 <header>
-<nav class="navbar">
-    <div class="nav-left">
-        <div class="j-logo">J</div>
-    </div>
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
 
-    <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="premium_tools.html">Premium Tools</a></li>
-        <li><a href="Jeremy_Okeke.html">About Me</a></li>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="premium_tools.html">Premium Tools</a></li>
+            <li><a href="services.html">Hire Me</a></li>
+            <li><a href="Jeremy_Okeke.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="request_form.html">Request Tool</a></li>
 
-        <li class="dropdown">
-            <a class="dropdown-btn">More ▼</a>
-            <ul class="dropdown-menu">
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="privacy_policy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms</a></li>
-                <li><a href="store.html">Store</a></li>
-            </ul>
-        </li>
-    </ul>
-
-    <div class="hamburger" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-    </div>
-</nav>
-
+            <li class="dropdown">
+                <a class="dropdown-btn">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html" class="active">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 </header>
 
 <section class="hero">
-    <h1>Privacy Policy</h1>
-    <p>Your privacy matters. Here’s how your information is handled.</p>
+    <div class="hero-inner">
+        <h1>Privacy Policy</h1>
+        <p>How your data is handled.</p>
+    </div>
 </section>
 
 <section class="top-tools">
-    <h2>Information I Collect</h2>
+    <h2>Your Privacy</h2>
 
-    <div class="project-grid">
-
-        <div class="project-card">
-            <h3>Purchases</h3>
-            <p>Handled securely by Gumroad. I do not see your payment details.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Emails</h3>
-            <p>I only use your email to reply to you.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Tool Usage</h3>
-            <p>All tools run offline and collect no data.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Your Rights</h3>
-            <p>You may request deletion of any personal information.</p>
-        </div>
-
+    <div class="featured-box">
+        <p>I do not collect personal data on this website.</p>
+        <p>Any purchases are handled securely through Gumroad.</p>
     </div>
 </section>
 
@@ -77,22 +58,11 @@
 
 <script>
 function toggleMenu() {
-    const nav = document.getElementById("nav-links");
-    const burger = document.querySelector(".hamburger");
-    nav.classList.toggle("open");
-    burger.classList.toggle("active");
+    document.getElementById("nav-links").classList.toggle("open");
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    const dropdownBtn = document.querySelector(".dropdown-btn");
-    const dropdown = document.querySelector(".dropdown");
-
-    dropdownBtn.addEventListener("click", () => {
-        dropdown.classList.toggle("open");
-    });
-});
+document.querySelector(".dropdown-btn").onclick = () =>
+    document.querySelector(".dropdown").classList.toggle("open");
 </script>
-
 
 </body>
 </html>

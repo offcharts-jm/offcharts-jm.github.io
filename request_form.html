@@ -3,84 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request a Tool | Jeremy</title>
+    <title>Request Tool | Jeremy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-<nav class="navbar">
-    <div class="nav-left">
-        <div class="j-logo">J</div>
-    </div>
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
 
-    <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="premium_tools.html">Premium Tools</a></li>
-        <li><a href="Jeremy_Okeke.html">About Me</a></li>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="premium_tools.html">Premium Tools</a></li>
+            <li><a href="services.html">Hire Me</a></li>
+            <li><a href="Jeremy_Okeke.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="request_form.html" class="active">Request Tool</a></li>
 
-        <li class="dropdown">
-            <a class="dropdown-btn">More ▼</a>
-            <ul class="dropdown-menu">
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="privacy_policy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms</a></li>
-                <li><a href="store.html">Store</a></li>
-            </ul>
-        </li>
-    </ul>
-
-    <div class="hamburger" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-    </div>
-</nav>
-
+            <li class="dropdown">
+                <a class="dropdown-btn">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 </header>
 
 <section class="hero">
-    <h1>Request a Custom Tool</h1>
-    <p>Tell me what you need — I’ll build it.</p>
+    <div class="hero-inner">
+        <h1>Request a Tool</h1>
+        <p>Submit your idea for a new tool.</p>
+    </div>
 </section>
 
 <section class="top-tools">
-    <h2>🛠 Custom Tool Request Form</h2>
+    <h2>Submit Your Request</h2>
 
-    <div class="form-container">
-
-        <form action="https://formspree.io/f/mqkrjzlv" method="POST">
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Your Name</label>
-                    <input type="text" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Your Email</label>
-                    <input type="email" name="email" required>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Tool Name / Title</label>
-                <input type="text" name="tool_title" placeholder="e.g., Invoice Generator, Data Cleaner" required>
-            </div>
-
-            <div class="form-group">
-                <label>Describe the Tool You Need</label>
-                <textarea name="message" rows="7" placeholder="Explain what the tool should do, features, inputs, outputs…" required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>Deadline (Optional)</label>
-                <input type="text" name="deadline" placeholder="e.g., 1 week, ASAP, no deadline">
-            </div>
-
-            <button type="submit" class="btn" style="margin-top: 10px;">Submit Request</button>
-
-        </form>
-
+    <div class="featured-box">
+        <p>Email your idea to:</p>
+        <p><strong>offchartsjm@gmail.com</strong></p>
     </div>
 </section>
 
@@ -90,20 +58,10 @@
 
 <script>
 function toggleMenu() {
-    const nav = document.getElementById("nav-links");
-    const burger = document.querySelector(".hamburger");
-    nav.classList.toggle("open");
-    burger.classList.toggle("active");
+    document.getElementById("nav-links").classList.toggle("open");
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    const dropdownBtn = document.querySelector(".dropdown-btn");
-    const dropdown = document.querySelector(".dropdown");
-
-    dropdownBtn.addEventListener("click", () => {
-        dropdown.classList.toggle("open");
-    });
-});
+document.querySelector(".dropdown-btn").onclick = () =>
+    document.querySelector(".dropdown").classList.toggle("open");
 </script>
 
 </body>
