@@ -55,8 +55,7 @@ a, a:visited {
     box-shadow: 0 0 10px rgba(79, 156, 249, 0.45);
     transition: 0.25s ease;
 
-    /* FIXES NAVBAR HEIGHT ISSUE */
-    margin-top: 2px;
+    margin-top: 2px; /* fixes navbar height */
 }
 
 /* -----------------------------------
@@ -149,8 +148,7 @@ a, a:visited {
     align-items: center;
     justify-content: space-between;
 
-    /* Tighter spacing */
-    gap: 20px;
+    gap: 20px; /* tighter spacing */
     flex-wrap: wrap;
 }
 
@@ -167,8 +165,7 @@ a, a:visited {
     object-fit: cover;
     box-shadow: 0 0 20px rgba(79, 156, 249, 0.25);
 
-    /* Moves closer to text */
-    margin-left: -10px;
+    margin-left: -10px; /* closer to text */
 }
 
 /* -----------------------------------
@@ -242,29 +239,42 @@ a, a:visited {
 }
 
 /* -----------------------------------
-   MOBILE NAVIGATION
+   MOBILE FIXES
 ----------------------------------- */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    position: absolute;
-    left: 20px;
-}
-
-.hamburger span {
-    width: 28px;
-    height: 3px;
-    background: white;
-    border-radius: 5px;
-    transition: var(--transition);
-}
-
 @media (max-width: 768px) {
 
-    .hamburger { display: flex; }
+    /* Move hamburger to the right */
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        left: auto;
+    }
 
+    .nav-left {
+        left: 20px; /* J logo stays left */
+    }
+
+    /* Stack hero vertically */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .hero-text {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    /* Smaller PFP on mobile */
+    .hero-pfp {
+        width: 150px;
+        height: 150px;
+        margin-left: 0;
+    }
+
+    /* Mobile nav dropdown */
     #nav-links {
         position: absolute;
         top: 70px;
