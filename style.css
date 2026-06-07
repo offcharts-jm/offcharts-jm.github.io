@@ -29,13 +29,11 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Remove default underline */
 a, a:visited {
     text-decoration: none;
     color: white;
 }
 
-/* Centered page layout like mockup */
 .page {
     max-width: 900px;
     margin: 0 auto;
@@ -43,7 +41,7 @@ a, a:visited {
 }
 
 /* -----------------------------------
-   NAVBAR — GLASS + LOGO LEFT
+   NAVBAR
 ----------------------------------- */
 .navbar {
     display: flex;
@@ -66,12 +64,6 @@ a, a:visited {
     color: white;
 }
 
-.logo {
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-
-/* Nav links */
 #nav-links {
     display: flex;
     gap: 28px;
@@ -86,7 +78,6 @@ a, a:visited {
     transition: var(--transition);
 }
 
-/* Hover underline animation */
 #nav-links li a::after {
     content: "";
     position: absolute;
@@ -105,10 +96,8 @@ a, a:visited {
 }
 
 /* -----------------------------------
-   DROPDOWN — FIXED (click to open)
+   DROPDOWN (CLICK TO OPEN)
 ----------------------------------- */
-
-/* Hidden by default */
 .dropdown-menu {
     display: none;
     opacity: 0;
@@ -122,7 +111,6 @@ a, a:visited {
     position: absolute;
 }
 
-/* Show when .open is added */
 .dropdown.open .dropdown-menu {
     display: block;
     opacity: 1;
@@ -131,25 +119,34 @@ a, a:visited {
 }
 
 /* -----------------------------------
-   HERO — MATCHES MOCKUP
+   HERO — LEFT ALIGNED
 ----------------------------------- */
 .hero {
-    text-align: center;
-    padding: 70px 20px;
+    padding: 120px 20px;
+    text-align: left;
     background: linear-gradient(180deg, #0B0F19 0%, #0F1522 100%);
     border-bottom: 1px solid var(--border);
 }
 
 .hero h1 {
-    font-size: 2.6rem;
+    font-size: 3rem;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .hero h2 {
-    font-size: 1.2rem;
-    color: var(--text-light);
+    font-size: 1.5rem;
+    color: #9BBEF9;
     max-width: 700px;
-    margin: 15px auto 0;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 650px;
+    margin-top: 18px;
+    line-height: 1.7;
 }
 
 /* -----------------------------------
@@ -173,7 +170,7 @@ a, a:visited {
 }
 
 /* -----------------------------------
-   CARD GRID — MOBILE + DESKTOP FIXED
+   CARD GRID
 ----------------------------------- */
 .project-grid {
     display: grid;
@@ -182,7 +179,6 @@ a, a:visited {
     grid-template-columns: 1fr;
 }
 
-/* Desktop layout */
 @media (min-width: 768px) {
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -195,7 +191,6 @@ a, a:visited {
     }
 }
 
-/* Card */
 .project-card {
     background: var(--glass);
     backdrop-filter: blur(10px);
@@ -203,13 +198,11 @@ a, a:visited {
     border-radius: var(--radius);
     border: 1px solid var(--border);
     transition: var(--transition);
-    box-shadow: 0 0 0 rgba(0,0,0,0);
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-/* Hover effect */
 .project-card:hover {
     transform: translateY(-6px);
     border-color: var(--accent);
@@ -230,7 +223,7 @@ a, a:visited {
 }
 
 /* -----------------------------------
-   FORM — MATCHES MOCKUP
+   FORM
 ----------------------------------- */
 .form-container {
     max-width: 800px;
@@ -279,7 +272,7 @@ a, a:visited {
 }
 
 /* -----------------------------------
-   MOBILE NAVIGATION FIXES
+   MOBILE NAVIGATION
 ----------------------------------- */
 .hamburger {
     display: none;
@@ -298,7 +291,6 @@ a, a:visited {
     transition: var(--transition);
 }
 
-/* Mobile menu */
 @media (max-width: 768px) {
 
     .hamburger { display: flex; }
@@ -317,7 +309,6 @@ a, a:visited {
         border-bottom: 1px solid var(--border);
     }
 
-    /* FIX: allow full dropdown height */
     #nav-links.open {
         max-height: 1000px;
         padding: 20px 0;
@@ -325,7 +316,6 @@ a, a:visited {
 
     #nav-links li { margin: 12px 0; }
 
-    /* Dropdown inside mobile menu */
     .dropdown-menu {
         width: 100%;
         position: static;

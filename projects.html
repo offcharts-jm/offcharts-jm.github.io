@@ -9,33 +9,33 @@
 <body>
 
 <header>
-    <nav class="navbar">
+<nav class="navbar">
+    <div class="nav-left">
+        <div class="j-logo">J</div>
+    </div>
 
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span><span></span><span></span>
-        </div>
+    <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="premium_tools.html">Premium Tools</a></li>
+        <li><a href="Jeremy_Okeke.html">About Me</a></li>
 
-        <ul id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html" class="active">Projects</a></li>
-            <li><a href="premium_tools.html">Premium Tools</a></li>
-            <li><a href="services.html">Hire Me</a></li>
-            <li><a href="Jeremy_Okeke.html">About Me</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="request_form.html">Request Tool</a></li>
+        <li class="dropdown">
+            <a class="dropdown-btn">More ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="store.html">Store</a></li>
+            </ul>
+        </li>
+    </ul>
 
-            <li class="dropdown">
-                <a class="dropdown-btn">More ▼</a>
-                <ul class="dropdown-menu">
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms</a></li>
-                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
-                </ul>
-            </li>
-        </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
 
-    </nav>
 </header>
 
 <section class="hero">
