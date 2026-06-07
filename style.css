@@ -1,5 +1,82 @@
 /* -----------------------------------
-   HERO — DESKTOP (LEFT TEXT + RIGHT PFP)
+   THEME
+----------------------------------- */
+:root {
+    --bg: #0B0F19;
+    --bg-light: #111827;
+    --glass: rgba(17, 24, 39, 0.55);
+    --card: #141B2D;
+    --border: #1F2937;
+    --text: #E5E7EB;
+    --text-light: #9CA3AF;
+    --accent: #4F9CF9;
+    --accent-hover: #1E6FD9;
+    --accent-glow: rgba(79, 156, 249, 0.45);
+    --radius: 14px;
+    --transition: 0.25s ease;
+}
+
+/* -----------------------------------
+   GLOBAL
+----------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: white; }
+
+/* -----------------------------------
+   J LOGO
+----------------------------------- */
+.j-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4F9CF9, #1E3A8A);
+    border: 2px solid rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: white;
+    box-shadow: 0 0 10px rgba(79, 156, 249, 0.45);
+}
+
+/* -----------------------------------
+   NAVBAR
+----------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 25px;
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-left {
+    position: absolute;
+    left: 20px;
+}
+
+#nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+/* -----------------------------------
+   HERO — DESKTOP
 ----------------------------------- */
 .hero {
     padding: 120px 20px;
@@ -21,7 +98,7 @@
     margin-top: 25px;
     display: flex;
     gap: 12px;
-    justify-content: flex-start; /* LEFT ON DESKTOP */
+    justify-content: flex-start;
 }
 
 .hero-pfp {
@@ -34,11 +111,81 @@
 }
 
 /* -----------------------------------
+   BUTTONS
+----------------------------------- */
+.btn {
+    padding: 12px 22px;
+    background: var(--accent);
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.btn.alt { background: #1E293B; }
+
+.btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-3px);
+}
+
+/* -----------------------------------
+   FEATURED + PROJECT BOXES
+----------------------------------- */
+.top-tools {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.featured-box,
+.project-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: 0 0 18px rgba(79, 156, 249, 0.15);
+    transition: var(--transition);
+}
+
+.project-card:hover,
+.featured-box:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+
+.project-grid {
+    display: grid;
+    gap: 22px;
+    padding: 20px 0;
+}
+
+@media (min-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1100px) {
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* -----------------------------------
+   FOOTER
+----------------------------------- */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--text-light);
+}
+
+/* -----------------------------------
    MOBILE FIXES
 ----------------------------------- */
 @media (max-width: 768px) {
 
-    /* Hamburger visible */
     .hamburger {
         display: flex;
         position: absolute;
@@ -55,7 +202,6 @@
         border-radius: 5px;
     }
 
-    /* Stack hero vertically */
     .hero {
         flex-direction: column;
         text-align: center;
@@ -68,7 +214,7 @@
     }
 
     .hero-buttons {
-        justify-content: center; /* CENTER ON MOBILE */
+        justify-content: center;
     }
 
     .hero-pfp {
@@ -77,7 +223,6 @@
         margin: 0 auto;
     }
 
-    /* Mobile dropdown */
     #nav-links {
         position: absolute;
         top: 70px;
