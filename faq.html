@@ -6,12 +6,10 @@
     <title>FAQ | Jeremy</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
     <nav class="navbar">
-        <div class="logo">Jeremy</div>
 
         <div class="hamburger" onclick="toggleMenu()">
             <span></span><span></span><span></span>
@@ -25,15 +23,24 @@
             <li><a href="Jeremy_Okeke.html">About Me</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="request_form.html">Request Tool</a></li>
-            <li><a href="faq.html" class="active">FAQ</a></li>
-            <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+
+            <li class="dropdown">
+                <a class="dropdown-btn">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="faq.html" class="active">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+                </ul>
+            </li>
         </ul>
+
     </nav>
 </header>
 
 <section class="hero">
     <h1>Frequently Asked Questions</h1>
-    <p>Everything you need to know about my tools, downloads, and support.</p>
+    <p>Everything you need to know about my tools and downloads.</p>
 </section>
 
 <section class="top-tools">
@@ -43,27 +50,27 @@
 
         <div class="project-card">
             <h3>How do I download my tools?</h3>
-            <p>After purchase, Gumroad sends you an instant download link. You can also re-download anytime from your Gumroad library.</p>
+            <p>After purchase, Gumroad sends you an instant download link.</p>
         </div>
 
         <div class="project-card">
             <h3>Do your tools work offline?</h3>
-            <p>Yes — all my tools are fully offline. No internet connection required.</p>
+            <p>Yes — all tools run fully offline.</p>
         </div>
 
         <div class="project-card">
-            <h3>What operating systems are supported?</h3>
-            <p>All tools are built for Windows. Some Python scripts may also run on macOS/Linux.</p>
+            <h3>What OS do you support?</h3>
+            <p>All tools are built for Windows.</p>
         </div>
 
         <div class="project-card">
             <h3>Do you offer refunds?</h3>
-            <p>Yes — if something doesn’t work for you, contact me and I’ll sort it out.</p>
+            <p>Yes — if something doesn’t work, contact me.</p>
         </div>
 
         <div class="project-card">
-            <h3>Can you build a custom tool for me?</h3>
-            <p>Absolutely. Visit the Request Tool page and tell me what you need.</p>
+            <h3>Can you build a custom tool?</h3>
+            <p>Yes — submit a request on the Request Tool page.</p>
         </div>
 
     </div>
@@ -75,9 +82,20 @@
 
 <script>
 function toggleMenu() {
-    document.getElementById("nav-links").classList.toggle("open");
-    document.querySelector(".hamburger").classList.toggle("active");
+    const nav = document.getElementById("nav-links");
+    const burger = document.querySelector(".hamburger");
+    nav.classList.toggle("open");
+    burger.classList.toggle("active");
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const dropdownBtn = document.querySelector(".dropdown-btn");
+    const dropdown = document.querySelector(".dropdown");
+
+    dropdownBtn.addEventListener("click", () => {
+        dropdown.classList.toggle("open");
+    });
+});
 </script>
 
 </body>

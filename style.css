@@ -105,6 +105,32 @@ a, a:visited {
 }
 
 /* -----------------------------------
+   DROPDOWN — FIXED (click to open)
+----------------------------------- */
+
+/* Hidden by default */
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 10px 0;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    position: absolute;
+}
+
+/* Show when .open is added */
+.dropdown.open .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* -----------------------------------
    HERO — MATCHES MOCKUP
 ----------------------------------- */
 .hero {
@@ -299,16 +325,11 @@ a, a:visited {
 
     #nav-links li { margin: 12px 0; }
 
-    /* FIX: dropdown menu showing all items */
+    /* Dropdown inside mobile menu */
     .dropdown-menu {
+        width: 100%;
         position: static;
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-        background: var(--card);
-        border: 1px solid var(--border);
-        padding: 10px 0;
-        box-shadow: none;
+        border-radius: 0;
     }
 
     .dropdown-menu li a { padding: 10px 0; }
