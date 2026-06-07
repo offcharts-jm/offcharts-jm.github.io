@@ -1,9 +1,8 @@
 /* -----------------------------------
-   PREMIUM DARK THEME VARIABLES
+   THEME
 ----------------------------------- */
 :root {
     --bg: #0B0F19;
-    --bg-light: #111827;
     --glass: rgba(17, 24, 39, 0.55);
     --card: #141B2D;
     --border: #1F2937;
@@ -26,24 +25,12 @@ body {
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
-    scroll-behavior: smooth;
 }
 
-/* Remove default underline */
-a, a:visited {
-    text-decoration: none;
-    color: white;
-}
-
-/* Centered page layout like mockup */
-.page {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 18px;
-}
+a { text-decoration: none; color: white; }
 
 /* -----------------------------------
-   NAVBAR — GLASS + LOGO LEFT
+   NAVBAR
 ----------------------------------- */
 .navbar {
     display: flex;
@@ -58,17 +45,21 @@ a, a:visited {
     z-index: 1000;
 }
 
-.nav-left {
+/* Hamburger */
+.hamburger {
+    display: none;
     position: absolute;
     left: 20px;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: white;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
-.logo {
-    font-weight: 700;
-    font-size: 1.2rem;
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
 }
 
 /* Nav links */
@@ -76,113 +67,119 @@ a, a:visited {
     display: flex;
     gap: 28px;
     list-style: none;
-    transition: var(--transition);
+    align-items: center;
 }
 
 #nav-links li a {
     padding: 8px 14px;
     border-radius: 6px;
+    transition: var(--transition);
+}
+
+/* Dropdown */
+.dropdown {
     position: relative;
-    transition: var(--transition);
 }
 
-/* Hover underline animation */
-#nav-links li a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -4px;
-    width: 0%;
-    height: 2px;
-    background: var(--accent);
-    transition: var(--transition);
-    transform: translateX(-50%);
-}
-
-#nav-links li a:hover::after,
-#nav-links li a.active::after {
-    width: 60%;
-}
-
-/* -----------------------------------
-   DROPDOWN — FIXED (click to open)
------------------------------------ */
-
-/* Hidden by default */
 .dropdown-menu {
     display: none;
-    opacity: 0;
-    transform: translateY(10px);
-    pointer-events: none;
+    position: absolute;
     background: var(--card);
     border: 1px solid var(--border);
-    padding: 10px 0;
     border-radius: var(--radius);
-    transition: var(--transition);
-    position: absolute;
+    padding: 10px 0;
+    top: 30px;
+    right: 0;
+    width: 160px;
 }
 
-/* Show when .open is added */
 .dropdown.open .dropdown-menu {
     display: block;
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    text-align: left;
 }
 
 /* -----------------------------------
-   HERO — MATCHES MOCKUP
+   HERO — DEFAULT (CENTERED FOR ALL PAGES)
 ----------------------------------- */
 .hero {
+    padding: 120px 20px;
     text-align: center;
-    padding: 70px 20px;
     background: linear-gradient(180deg, #0B0F19 0%, #0F1522 100%);
     border-bottom: 1px solid var(--border);
 }
 
-.hero h1 {
-    font-size: 2.6rem;
-    font-weight: 700;
+.hero-inner {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.hero h2 {
-    font-size: 1.2rem;
-    color: var(--text-light);
-    max-width: 700px;
-    margin: 15px auto 0;
+/* -----------------------------------
+   INDEX HERO — LEFT ALIGNED ONLY
+----------------------------------- */
+.hero-index .hero-inner {
+    text-align: left;
+}
+
+.hero-index .hero-buttons {
+    justify-content: flex-start;
 }
 
 /* -----------------------------------
    BUTTONS
 ----------------------------------- */
 .btn {
-    display: inline-block;
     padding: 12px 22px;
     background: var(--accent);
-    color: white;
     border-radius: var(--radius);
-    transition: var(--transition);
     font-weight: 600;
+    transition: var(--transition);
     box-shadow: 0 0 12px var(--accent-glow);
+    display: inline-block;
 }
+
+.btn.alt { background: #1E293B; }
 
 .btn:hover {
     background: var(--accent-hover);
     transform: translateY(-3px);
-    box-shadow: 0 0 18px var(--accent-glow);
 }
 
 /* -----------------------------------
-   CARD GRID — MOBILE + DESKTOP FIXED
+   FEATURED + PROJECT BOXES
 ----------------------------------- */
+.top-tools {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.featured-box,
+.project-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: 0 0 18px rgba(79, 156, 249, 0.15);
+    transition: var(--transition);
+}
+
+.project-card:hover,
+.featured-box:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+
 .project-grid {
     display: grid;
     gap: 22px;
     padding: 20px 0;
-    grid-template-columns: 1fr;
 }
 
-/* Desktop layout */
 @media (min-width: 768px) {
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -195,113 +192,23 @@ a, a:visited {
     }
 }
 
-/* Card */
-.project-card {
-    background: var(--glass);
-    backdrop-filter: blur(10px);
-    padding: 22px;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    transition: var(--transition);
-    box-shadow: 0 0 0 rgba(0,0,0,0);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* Hover effect */
-.project-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--accent);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
-}
-
 /* -----------------------------------
-   FEATURED BOX
+   FOOTER
 ----------------------------------- */
-.featured-box {
-    background: var(--glass);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
+footer {
     text-align: center;
-    box-shadow: 0 0 18px rgba(79, 156, 249, 0.15);
-}
-
-/* -----------------------------------
-   FORM — MATCHES MOCKUP
------------------------------------ */
-.form-container {
-    max-width: 800px;
-    margin: auto;
-    background: var(--glass);
-    backdrop-filter: blur(10px);
-    padding: 35px;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-}
-
-.form-row {
-    display: flex;
-    gap: 20px;
-}
-
-.form-group {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    margin-bottom: 8px;
-    font-weight: 600;
+    padding: 30px;
     color: var(--text-light);
 }
 
-.form-group input,
-.form-group textarea {
-    padding: 14px;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    background: var(--bg);
-    color: var(--text);
-    font-size: 1rem;
-    transition: var(--transition);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent);
-    background: #0F1522;
-}
-
 /* -----------------------------------
-   MOBILE NAVIGATION FIXES
+   MOBILE FIXES
 ----------------------------------- */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    position: absolute;
-    left: 20px;
-}
-
-.hamburger span {
-    width: 28px;
-    height: 3px;
-    background: white;
-    border-radius: 5px;
-    transition: var(--transition);
-}
-
-/* Mobile menu */
 @media (max-width: 768px) {
 
-    .hamburger { display: flex; }
+    .hamburger {
+        display: flex;
+    }
 
     #nav-links {
         position: absolute;
@@ -317,30 +224,23 @@ a, a:visited {
         border-bottom: 1px solid var(--border);
     }
 
-    /* FIX: allow full dropdown height */
     #nav-links.open {
         max-height: 1000px;
         padding: 20px 0;
     }
 
-    #nav-links li { margin: 12px 0; }
-
-    /* Dropdown inside mobile menu */
     .dropdown-menu {
-        width: 100%;
         position: static;
+        width: 100%;
         border-radius: 0;
     }
 
-    .dropdown-menu li a { padding: 10px 0; }
-
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translateY(8px);
+    /* Index hero becomes centered on mobile */
+    .hero-index .hero-inner {
+        text-align: center;
     }
 
-    .hamburger.active span:nth-child(2) { opacity: 0; }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translateY(-8px);
+    .hero-index .hero-buttons {
+        justify-content: center;
     }
 }
