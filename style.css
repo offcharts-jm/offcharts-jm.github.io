@@ -31,24 +31,6 @@ body {
 a { text-decoration: none; color: white; }
 
 /* -----------------------------------
-   J LOGO
------------------------------------ */
-.j-logo {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #4F9CF9, #1E3A8A);
-    border: 2px solid rgba(255,255,255,0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    font-weight: 900;
-    color: white;
-    box-shadow: 0 0 10px rgba(79, 156, 249, 0.45);
-}
-
-/* -----------------------------------
    NAVBAR
 ----------------------------------- */
 .navbar {
