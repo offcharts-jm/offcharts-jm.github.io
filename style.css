@@ -142,7 +142,202 @@ a, a:visited {
         gap: 25px;
     }
 
+    .hero-text {/* -----------------------------------
+   THEME
+----------------------------------- */
+:root {
+    --bg: #0B0F19;
+    --bg-light: #111827;
+    --glass: rgba(17, 24, 39, 0.55);
+    --card: #141B2D;
+    --border: #1F2937;
+    --text: #E5E7EB;
+    --text-light: #9CA3AF;
+    --accent: #4F9CF9;
+    --accent-hover: #1E6FD9;
+    --accent-glow: rgba(79, 156, 249, 0.45);
+    --radius: 14px;
+    --transition: 0.25s ease;
+}
+
+/* -----------------------------------
+   GLOBAL
+----------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: white; }
+
+/* -----------------------------------
+   J LOGO
+----------------------------------- */
+.j-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4F9CF9, #1E3A8A);
+    border: 2px solid rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: white;
+    box-shadow: 0 0 10px rgba(79, 156, 249, 0.45);
+}
+
+/* -----------------------------------
+   NAVBAR
+----------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 25px;
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-left {
+    position: absolute;
+    left: 20px;
+}
+
+#nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+/* -----------------------------------
+   HERO — DESKTOP (LEFT TEXT + RIGHT PFP)
+----------------------------------- */
+.hero {
+    padding: 120px 20px;
+    background: linear-gradient(180deg, #0B0F19 0%, #0F1522 100%);
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 650px;
+    text-align: left;
+}
+
+.hero-buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start; /* LEFT ON DESKTOP */
+}
+
+.hero-pfp {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(79, 156, 249, 0.25);
+}
+
+/* -----------------------------------
+   BUTTONS
+----------------------------------- */
+.btn {
+    padding: 12px 22px;
+    background: var(--accent);
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.btn.alt { background: #1E293B; }
+
+.btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-3px);
+}
+
+/* -----------------------------------
+   MOBILE FIXES
+----------------------------------- */
+@media (max-width: 768px) {
+
+    /* Hamburger visible */
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 28px;
+        height: 3px;
+        background: white;
+        border-radius: 5px;
+    }
+
+    /* Stack hero vertically */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
     .hero-text {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center; /* CENTER ON MOBILE */
+    }
+
+    .hero-pfp {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+
+    /* Mobile dropdown */
+    #nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--bg);
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        border-bottom: 1px solid var(--border);
+    }
+
+    #nav-links.open {
+        max-height: 1000px;
+        padding: 20px 0;
+    }
+}
+
         text-align: center;
         max-width: 100%;
     }
