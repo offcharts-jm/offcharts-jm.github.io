@@ -158,12 +158,6 @@ a {
     letter-spacing: 0.02em;
 }
 
-.hero h2 {
-    font-size: 2.1rem;
-    margin-bottom: 12px;
-    color: #BFDBFE;
-}
-
 .hero p {
     font-size: 1.05rem;
     color: var(--text-light);
@@ -174,7 +168,6 @@ a {
 /* INDEX HERO — LEFT ALIGNED ONLY */
 .hero-index .hero-inner {
     text-align: left;
-    margin: 0 auto;
 }
 
 .hero-index p {
@@ -361,10 +354,6 @@ footer {
 
     .hero h1 {
         font-size: 2.2rem;
-    }
-
-    .hero h2 {
-        font-size: 1.6rem;
     }
 
     .hero-index .hero-inner {
