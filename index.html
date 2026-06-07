@@ -11,9 +11,6 @@
 <header>
     <nav class="navbar">
 
-        <!-- REMOVED J LOGO -->
-        <div class="nav-left"></div>
-
         <div class="hamburger" onclick="toggleMenu()">
             <span></span><span></span><span></span>
         </div>
@@ -42,24 +39,95 @@
 </header>
 
 <!-- HERO SECTION -->
-<section class="hero">
+<section class="hero" style="padding: 120px 20px;">
+    <h1 style="font-size: 3.0rem; margin-bottom: 10px;">Hello! I'm Jeemy Okeke</h1>
+    <h2 style="font-size: 2.6rem; margin-bottom: 10px;">Developer creating simple, fast and beginner-friendly tools</h2>
+    <h3 style="font-size: 1.5rem; color: #9BBEF9; max-width: 700px; margin: auto;">
+       I build automation apps, data extractors, password managers and premium Windows software designed with clarity, speed and real‑world usefulness in mind.
+    </h3>
 
-    <div class="hero-text">
-        <h1>Hello! I’m Jeremy Okeke.</h1>
+    <div style="margin-top: 35px;">
+        <a href="premium_tools.html" class="btn" style="margin-right: 10px;">View Premium Tools</a>
+        <a href="projects.html" class="btn" style="background:#1E293B;">View GitHub Projects</a>
+    </div>
+</section>
 
-        <h2>Developer creating simple, fast and beginner‑friendly tools.</h2>
+<!-- FEATURED PREMIUM TOOL -->
+<section class="top-tools">
+    <h2>Featured Tool</h2>
 
-        <p>
-            I build automation apps, data extractors, password managers and premium Windows software 
-            designed with clarity, speed and real‑world usefulness in mind.
-        </p>
+    <div class="featured-box">
+        <h3 style="margin-top:0;">PDF Data Extractor PRO</h3>
+        <p>Extract tables, text, and structured data from PDFs with batch processing and Excel/CSV export.</p>
+        <a href="https://offchartsjm.gumroad.com/l/pdf-extractor-pro" class="btn">Buy</a>
+    </div>
+</section>
 
-        <div class="hero-buttons">
-            <a href="premium_tools.html" class="btn">View Premium Tools</a>
-            <a href="projects.html" class="btn alt">View GitHub Projects</a>
+<!-- QUICK PREVIEW OF PREMIUM TOOLS -->
+<section class="top-tools">
+    <h2>Premium Tools</h2>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <h3>Password Manager PRO</h3>
+            <p>A secure AES‑256 encrypted password vault for Windows.</p>
+            <a href="https://offchartsjm.gumroad.com/l/password-manager-pro" class="btn">Buy</a>
         </div>
+
+        <div class="project-card">
+            <h3>Ultimate Software Bundle</h3>
+            <p>All premium tools in one discounted bundle.</p>
+            <a href="https://offchartsjm.gumroad.com/l/ultimate-software-bundle" class="btn">Buy</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- GITHUB PREVIEW -->
+<section class="top-tools">
+    <h2>GitHub Projects</h2>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <h3>Python Quiz App</h3>
+            <p>A full quiz application built in Python.</p>
+            <a href="https://github.com/offcharts-jm/python_quiz_app" class="btn">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Rock Paper Scissors</h3>
+            <p>A simple Rock-Paper-Scissors game against the computer.</p>
+            <a href="https://github.com/offcharts-jm/Rock_Paper_Scissors" class="btn">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Calculator</h3>
+            <p>A simple calculating project.</p>
+            <a href="https://github.com/offcharts-jm/python_calculator" class="btn">View on GitHub</a>
+        </div>
+
+
     </div>
 
-    <img src="https://avatars.githubusercontent.com/offcharts-jm" class="hero-pfp" alt="Jeremy Okeke">
-
+    <div style="text-align:center; margin-top:20px;">
+        <a href="projects.html" class="btn" style="background:#1E293B;">See All Projects</a>
+    </div>
 </section>
+
+<footer>
+    <p>© 2026 Jeremy — All Rights Reserved</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    const nav = document.getElementById("nav-links");
+    const burger = document.querySelector(".hamburger");
+    nav.classList.toggle("open");
+    burger.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
