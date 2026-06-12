@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Bundle | Jeremy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="premium_tools.html">Premium Tools</a></li>
+            <li><a href="ai_tools.html" class="active">AI Tools</a></li>
+            <li><a href="services.html">Hire Me</a></li>
+            <li><a href="Jeremy_Okeke.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <li class="dropdown">
+                <a class="dropdown-btn">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-inner">
+        <h1>AI Tools Bundle</h1>
+        <p>Smart, lightweight AI‑powered utilities designed to boost productivity.</p>
+    </div>
+</section>
+
+<section class="top-tools">
+    <h2>Included AI Tools</h2>
+    <p>Three powerful AI‑style tools built for speed, simplicity, and offline use.</p>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <h3>AI Summarizer</h3>
+            <p>Instantly generate clean, concise summaries from long text.</p>
+            <a href="#" class="btn">Included</a>
+        </div>
+
+        <div class="project-card">
+            <h3>AI Password Strength Checker</h3>
+            <p>Analyze password strength with smart pattern detection.</p>
+            <a href="#" class="btn">Included</a>
+        </div>
+
+        <div class="project-card">
+            <h3>AI Study Helper</h3>
+            <p>Generate study notes, key points, and practice questions.</p>
+            <a href="#" class="btn">Included</a>
+        </div>
+
+    </div>
+
+    <div class="pricing-box" style="margin-top: 50px;">
+        <h2>£7.99 — AI Tools Bundle</h2>
+        <p>Get all 3 AI tools instantly.</p>
+        <a href="https://offchartsjm.gumroad.com" class="btn">Buy Bundle</a>
+    </div>
+
+    <div class="pricing-box" style="margin-top: 30px;">
+        <h2>Or Get Everything</h2>
+        <p>All AI tools + all premium tools + all future releases.</p>
+        <a href="subscription.html" class="btn">Join Subscription</a>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Jeremy — All Rights Reserved</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("open");
+}
+document.querySelector(".dropdown-btn").onclick = () =>
+    document.querySelector(".dropdown").classList.toggle("open");
+</script>
+
+</body>
+</html>

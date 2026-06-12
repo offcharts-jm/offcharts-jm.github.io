@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools Hub | Jeremy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tools_hub.html" class="active">Tools Hub</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="premium_tools.html">Premium Tools</a></li>
+            <li><a href="ai_tools.html">AI Tools</a></li>
+            <li><a href="viral_tools.html">Viral Tools</a></li>
+            <li><a href="services.html">Hire Me</a></li>
+            <li><a href="Jeremy_Okeke.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <li class="dropdown">
+                <a class="dropdown-btn">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-inner">
+        <h1>Tools Hub</h1>
+        <p>Your complete collection of free tools, AI tools, premium tools, and bundles.</p>
+    </div>
+</section>
+
+<section class="top-tools">
+    <h2>Free Tools</h2>
+
+    <div class="project-grid">
+        <div class="project-card"><h3>PDF Compressor</h3><p>Free PDF compression.</p><a class="btn alt" href="#">Use Tool</a></div>
+        <div class="project-card"><h3>Password Generator</h3><p>Create secure passwords.</p><a class="btn alt" href="#">Use Tool</a></div>
+        <div class="project-card"><h3>Text Formatter</h3><p>Clean and format text.</p><a class="btn alt" href="#">Use Tool</a></div>
+    </div>
+
+    <h2 style="margin-top: 50px;">AI Tools</h2>
+
+    <div class="project-grid">
+        <div class="project-card"><h3>AI Summarizer</h3><p>Generate summaries.</p><a class="btn" href="ai_tools.html">View</a></div>
+        <div class="project-card"><h3>AI Password Checker</h3><p>Analyze password strength.</p><a class="btn" href="ai_tools.html">View</a></div>
+        <div class="project-card"><h3>AI Study Helper</h3><p>Generate study notes.</p><a class="btn" href="ai_tools.html">View</a></div>
+    </div>
+
+    <h2 style="margin-top: 50px;">Premium Tools</h2>
+
+    <div class="project-grid">
+        <div class="project-card"><h3>PDF Extractor PRO</h3><p>Extract structured data.</p><a class="btn" href="premium_tools.html">View</a></div>
+        <div class="project-card"><h3>Password Manager PRO</h3><p>Encrypted password vault.</p><a class="btn" href="premium_tools.html">View</a></div>
+        <div class="project-card"><h3>Ultimate Bundle</h3><p>All premium tools.</p><a class="btn" href="premium_tools.html">View</a></div>
+    </div>
+
+    <h2 style="margin-top: 50px;">Bundles</h2>
+
+    <div class="project-grid">
+        <div class="project-card"><h3>AI Tools Bundle</h3><p>All AI tools.</p><a class="btn" href="ai_tools.html">View</a></div>
+        <div class="project-card"><h3>Developer Starter Kit</h3><p>19 tools + templates.</p><a class="btn" href="projects.html">View</a></div>
+        <div class="project-card"><h3>Beginner Pack</h3><p>10 beginner scripts.</p><a class="btn" href="projects.html">View</a></div>
+    </div>
+
+    <div class="pricing-box" style="margin-top: 60px;">
+        <h2>Want Everything?</h2>
+        <p>Get all tools + all future releases.</p>
+        <a href="subscription.html" class="btn">Join Subscription</a>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Jeremy — All Rights Reserved</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("open");
+}
+document.querySelector(".dropdown-btn").onclick = () =>
+    document.querySelector(".dropdown").classList.toggle("open");
+</script>
+
+</body>
+</html>

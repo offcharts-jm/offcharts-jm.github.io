@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viral Tools | Jeremy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="viral_tools.html" class="active">Viral Tools</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="premium_tools.html">Premium Tools</a></li>
+            <li><a href="ai_tools.html">AI Tools</a></li>
+            <li><a href="services.html">Hire Me</a></li>
+            <li><a href="Jeremy_Okeke.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <li class="dropdown">
+                <a class="dropdown-btn">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="https://offchartsjm.gumroad.com">Store</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-inner">
+        <h1>Viral Tools</h1>
+        <p>Free, fast, shareable tools designed to bring traffic and help users instantly.</p>
+    </div>
+</section>
+
+<section class="top-tools">
+    <h2>Free Viral Tools</h2>
+    <p>These tools attract users, boost traffic, and grow your brand.</p>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <h3>Free PDF Compressor</h3>
+            <p>Compress PDF files instantly — no signup, no limits.</p>
+            <a href="#" class="btn alt">Use Free Tool</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Free Password Generator</h3>
+            <p>Create secure passwords instantly with one click.</p>
+            <a href="#" class="btn alt">Use Free Tool</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Free Text Formatter</h3>
+            <p>Clean, format, and transform text instantly.</p>
+            <a href="#" class="btn alt">Use Free Tool</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Study Timer Lite</h3>
+            <p>A lightweight version of your Study Timer app.</p>
+            <a href="#" class="btn alt">Use Free Tool</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Workout Tracker Lite</h3>
+            <p>Track sets, reps, and weight — simple and fast.</p>
+            <a href="#" class="btn alt">Use Free Tool</a>
+        </div>
+
+    </div>
+
+    <div class="pricing-box" style="margin-top: 50px;">
+        <h2>Want the Full Versions?</h2>
+        <p>Unlock all premium tools + all AI tools + all future tools.</p>
+        <a href="subscription.html" class="btn">Join Subscription</a>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Jeremy — All Rights Reserved</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("open");
+}
+document.querySelector(".dropdown-btn").onclick = () =>
+    document.querySelector(".dropdown").classList.toggle("open");
+</script>
+
+</body>
+</html>
